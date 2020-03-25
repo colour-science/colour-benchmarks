@@ -1,0 +1,8 @@
+**.pyc
+**/__pycache__/
+.cache*/
+env/
+results/
+Colour/
+html/
+.git/
