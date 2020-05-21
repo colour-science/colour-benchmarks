@@ -1,91 +1,35 @@
+# -*- coding: utf-8 -*-
+"""
+"colour.models" sub-package Benchmarks
+======================================
+"""
+
+from __future__ import division, unicode_literals
+
 import colour
-import os
 
-input_path = os.path.dirname(__file__)
-rgb_sd = colour.read_image(os.path.join(input_path, 'data', 'testImageSD.jpg'))
-rgb_hd = colour.read_image(os.path.join(input_path, 'data', 'testImageHD.jpg'))
-rgb_4k = colour.read_image(os.path.join(input_path, 'data', 'testImage4K.jpg'))
+from benchmarks.common import triplet_benchmark_factory
 
-xyz_sd = colour.sRGB_to_XYZ(rgb_sd)
-xyz_hd = colour.sRGB_to_XYZ(rgb_hd)
-xyz_4k = colour.sRGB_to_XYZ(rgb_4k)
+__author__ = 'Colour Developers'
+__copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
+__license__ = 'New BSD License - https://opensource.org/licenses/BSD-3-Clause'
+__maintainer__ = 'Colour Developers'
+__email__ = 'colour-developers@colour-science.org'
+__status__ = 'Production'
 
-lab_sd = colour.XYZ_to_Lab(xyz_sd)
-lab_hd = colour.XYZ_to_Lab(xyz_hd)
-lab_4k = colour.XYZ_to_Lab(xyz_4k)
+__all__ = ['COLOUR_MODELS_FACTORIES']
 
-ycbcr_sd = colour.RGB_to_YCbCr(rgb_sd)
-ycbcr_hd = colour.RGB_to_YCbCr(rgb_hd)
-ycbcr_4k = colour.RGB_to_YCbCr(rgb_4k)
+COLOUR_MODELS_FACTORIES = {
+    'XYZ_to_xyY': colour.models.XYZ_to_xyY,
+    'xyY_to_XYZ': colour.models.xyY_to_XYZ,
+    'xyY_to_xy': colour.models.xyY_to_xy,
+    'xy_to_xyY': colour.models.xy_to_xyY,
+    'XYZ_to_xy': colour.models.XYZ_to_xy,
+    'xy_to_XYZ': colour.models.xy_to_XYZ,
+    'XYZ_to_Lab': colour.models.XYZ_to_Lab,
+    'Lab_to_XYZ': colour.models.Lab_to_XYZ,
+    'Lab_to_LCHab': colour.models.Lab_to_LCHab,
+    'LCHab_to_Lab': colour.models.LCHab_to_Lab,
+}
 
-
-class sRGBtoXYZ:
-
-    def time_sd(self):
-        colour.sRGB_to_XYZ(rgb_sd)
-
-    def time_hd(self):
-        colour.sRGB_to_XYZ(rgb_hd)
-
-    def time_4k(self):
-        colour.sRGB_to_XYZ(rgb_4k)
-
-
-class XYZtosRGB:
-
-    def time_sd(self):
-        colour.XYZ_to_sRGB(xyz_sd)
-
-    def time_hd(self):
-        colour.XYZ_to_sRGB(xyz_hd)
-
-    def time_4k(self):
-        colour.XYZ_to_sRGB(xyz_4k)
-
-
-class RGBtoYCbCr:
-
-    def time_sd(self):
-        colour.RGB_to_YCbCr(rgb_sd)
-
-    def time_hd(self):
-        colour.RGB_to_YCbCr(rgb_hd)
-
-    def time_4k(self):
-        colour.RGB_to_YCbCr(rgb_4k)
-
-
-class YCbCrtoRGB:
-
-    def time_sd(self):
-        colour.YCbCr_to_RGB(ycbcr_sd)
-
-    def time_hd(self):
-        colour.YCbCr_to_RGB(ycbcr_hd)
-
-    def time_4k(self):
-        colour.YCbCr_to_RGB(ycbcr_4k)
-
-
-class XYZtoLab:
-
-    def time_sd(self):
-        colour.XYZ_to_Lab(xyz_sd)
-
-    def time_hd(self):
-        colour.XYZ_to_Lab(xyz_hd)
-
-    def time_4k(self):
-        colour.XYZ_to_Lab(xyz_4k)
-
-
-class LabtoXYZ:
-
-    def time_sd(self):
-        colour.Lab_to_XYZ(lab_sd)
-
-    def time_hd(self):
-        colour.Lab_to_XYZ(lab_hd)
-
-    def time_4k(self):
-        colour.Lab_to_XYZ(lab_4k)
+triplet_benchmark_factory(COLOUR_MODELS_FACTORIES, __name__)
