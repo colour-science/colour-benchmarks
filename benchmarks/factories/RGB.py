@@ -23,7 +23,7 @@ __all__ = [
     'RGBBenchmarkFactory', 'RGB_benchmark_factory'
 ]
 
-RESOURCES_DIRECTORY = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'data'))
+RESOURCES_DIRECTORY = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..','data'))
 IJK_SD = colour.read_image(os.path.join(RESOURCES_DIRECTORY, 'testImageSD.jpg'))
 IJK_HD = colour.read_image(os.path.join(RESOURCES_DIRECTORY, 'testImageHD.jpg'))
 IJK_UHD = colour.read_image(os.path.join(RESOURCES_DIRECTORY, 'testImage4K.jpg'))
