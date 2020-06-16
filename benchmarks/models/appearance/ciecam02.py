@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-"colour.algebra" sub-package Benchmarks
+"colour.appearance" sub-package Benchmarks
 ======================================
 """
 
@@ -18,24 +18,16 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
+specification = colour.appearance.CAM16_Specification(J=41.731207905126638,C=0.103355738709070,h=217.067959767393010)
 __all__ = ['']
 
-class normalise_vector():
+
+array = np.array([1,2,3])
+
+class XYZ_to_CAM16():
     def time_sd(self):
-        colour.algebra.normalise_vector(IJK_SD)
+        colour.appearance.XYZ_to_CAM16(array, array,20,20)
 
-    def time_hd(self):
-        colour.algebra.normalise_vector(IJK_HD)
-
-    def time_uhd(self):
-        colour.algebra.normalise_vector(IJK_UHD)
-
-class euclidean_distance():
+class CAM16_to_XYZ():
     def time_sd(self):
-        colour.algebra.euclidean_distance(IJK_SD, IJK_SD)
-
-    def time_hd(self):
-        colour.algebra.euclidean_distance(IJK_HD, IJK_HD)
-
-    def time_uhd(self):
-        colour.algebra.euclidean_distance(IJK_UHD, IJK_UHD)
+        colour.appearance.CAM16_to_XYZ(specification, array, 20, 20)
