@@ -25,8 +25,13 @@ IJK_SD_XY = IJK_SD[:,:,0:2]
 IJK_HD_XY = IJK_HD[:,:,0:2]
 IJK_UHD_XY = IJK_UHD[:,:,0:2]
 
+IJK_SD_LIMITED = IJK_SD[0:50,0:50,0:2]
+IJK_HD_LIMITED = IJK_HD[0:100,0:100,0:2]
+IJK_UHD_LIMITED = IJK_UHD[0:200,0:200,0:2]
+
 MCCAMY_FACTORIES = {
-    'CCT_to_xy_McCamy1992': colour.temperature.CCT_to_xy_McCamy1992,
+    'CCT_to_xy_McCamy1992': [colour.temperature.CCT_to_xy_McCamy1992,
+                        IJK_SD_LIMITED, IJK_HD_LIMITED, IJK_UHD_LIMITED],
     'xy_to_CCT_McCamy1992': [colour.temperature.xy_to_CCT_McCamy1992,
                         IJK_SD_XY, IJK_HD_XY, IJK_UHD_XY]
 }

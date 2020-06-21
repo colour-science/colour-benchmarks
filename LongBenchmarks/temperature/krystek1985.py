@@ -25,8 +25,15 @@ IJK_SD_XY = IJK_SD[:,:,0:2]
 IJK_HD_XY = IJK_HD[:,:,0:2]
 IJK_UHD_XY = IJK_UHD[:,:,0:2]
 
+IJK_SD_LIMITED = IJK_SD[0:50,0:50,0:2]
+IJK_HD_LIMITED= IJK_HD[0:100,0:100,0:2]
+IJK_UHD_LIMITED = IJK_UHD[0:200,0:200,0:2]
+
+
 KRYSTEK_FACTORIES = {
-    'CCT_to_uv_Krystek1985': colour.temperature.CCT_to_uv_Krystek1985,
+    'CCT_to_uv_Krystek1985': [colour.temperature.CCT_to_uv_Krystek1985,
+    IJK_SD_LIMITED, IJK_HD_LIMITED, IJK_UHD_LIMITED]
+
     'uv_to_CCT_Krystek1985': [colour.temperature.uv_to_CCT_Krystek1985,
                         IJK_SD_XY, IJK_HD_XY, IJK_UHD_XY]
 }

@@ -21,9 +21,9 @@ __status__ = 'Production'
 
 __all__ = ['CIE_FACTORIES']
 
-IJK_SD_XY = IJK_SD[:,:,0:2]
-IJK_HD_XY = IJK_HD[:,:,0:2]
-IJK_UHD_XY = IJK_UHD[:,:,0:2]
+IJK_SD_XY = IJK_UHD[0:100,0:100,0:2]
+IJK_HD_XY = IJK_UHD[0:300,0:300,0:2]
+IJK_UHD_XY = IJK_UHD[0:512,0:512,0:2]
 
 CIE_FACTORIES = {
     'CCT_to_xy_CIE_D': colour.temperature.CCT_to_xy_CIE_D,

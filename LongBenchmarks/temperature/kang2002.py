@@ -21,9 +21,9 @@ __status__ = 'Production'
 
 __all__ = ['KANG_FACTORIES']
 
-IJK_SD_XY = IJK_SD[:,:,0:2]
-IJK_HD_XY = IJK_HD[:,:,0:2]
-IJK_UHD_XY = IJK_UHD[:,:,0:2]
+IJK_SD_XY = IJK_SD[0:50,0:50,0:2]
+IJK_HD_XY = IJK_HD[0:100,0:100,0:2]
+IJK_UHD_XY = IJK_UHD[0:200,0:200,0:2]
 
 KANG_FACTORIES = {
     'CCT_to_xy_Kang2002': colour.temperature.CCT_to_xy_Kang2002,
