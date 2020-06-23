@@ -38,7 +38,7 @@ class table_interpolation_trilinear():
         V_xyz = colour.algebra.random_triplet_generator(2073600, random_state=prng)
         colour.algebra.table_interpolation_trilinear(V_xyz, LUT_TABLE)
 
-class euclidean_distance():
+class table_interpolation_tetrahedral():
     def time_sd(self):
         V_xyz = colour.algebra.random_triplet_generator(345600, random_state=prng)
         colour.algebra.table_interpolation_tetrahedral(V_xyz, LUT_TABLE)
