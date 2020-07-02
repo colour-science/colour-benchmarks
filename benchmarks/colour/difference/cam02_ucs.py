@@ -9,7 +9,7 @@ from functools import partial
 import colour
 import os
 import numpy as np
-from benchmarks.factories.differences import DIFFERENCES_benchmark_factory
+from benchmarks.factories.differences import DeltaE_benchmark_factory
 from colour.models.cam02_ucs import COEFFICIENTS_UCS_LUO2006
 
 __author__ = 'Colour Developers'
@@ -27,4 +27,4 @@ CAM02_FACTORIES = {
     'delta_E_CAM02UCS': colour.difference.delta_E_CAM02UCS,
 }
 
-DIFFERENCES_benchmark_factory(CAM02_FACTORIES, __name__)
+DeltaE_benchmark_factory(CAM02_FACTORIES, __name__)

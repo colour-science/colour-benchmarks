@@ -9,7 +9,7 @@ from functools import partial
 import colour
 import os
 import numpy as np
-from benchmarks.factories.RGB import RGB_benchmark_factory
+from benchmarks.factories.RGB import IJK_benchmark_factory
 from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
 
 __author__ = 'Colour Developers'
@@ -36,4 +36,4 @@ ROBERTSON_FACTORIES = {
     ]
 }
 
-RGB_benchmark_factory(ROBERTSON_FACTORIES, __name__)
+IJK_benchmark_factory(ROBERTSON_FACTORIES, __name__)

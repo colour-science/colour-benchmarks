@@ -20,7 +20,7 @@ __status__ = 'Production'
 
 __all__ = [
     'RESOURCES_DIRECTORY', 'IJK_SD', 'IJK_HD', 'IJK_UHD',
-    'RGBBenchmarkFactory', 'RGB_benchmark_factory'
+    'IJKBenchmarkFactory', 'IJK_benchmark_factory'
 ]
 
 RESOURCES_DIRECTORY = os.path.abspath(
@@ -35,7 +35,7 @@ IJK_UHD = colour.read_image(
     os.path.join(RESOURCES_DIRECTORY, 'testImage4K.jpg'))
 
 
-class RGBBenchmarkFactory(ABC):
+class IJKBenchmarkFactory(ABC):
     def __init__(self):
         super().__init__()
 
@@ -55,10 +55,10 @@ class RGBBenchmarkFactory(ABC):
         self._run_callable(self._ijk_uhd)
 
 
-def RGB_benchmark_factory(factories, modulename=__name__, install=True):
+def IJK_benchmark_factory(factories, modulename=__name__, install=True):
     classes = []
     for factory, callable_ in factories.items():
-        class_ = type(factory, (RGBBenchmarkFactory, ), {})
+        class_ = type(factory, (IJKBenchmarkFactory,), {})
         if type(callable_) == list:
             class_._callable = staticmethod(callable_[0])
             class_._ijk_sd = callable_[1]

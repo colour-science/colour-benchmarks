@@ -9,7 +9,7 @@ from functools import partial
 import colour
 import os
 import numpy as np
-from benchmarks.factories.RGB import RGB_benchmark_factory
+from benchmarks.factories.RGB import IJK_benchmark_factory
 from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
 
 __author__ = 'Colour Developers'
@@ -32,4 +32,4 @@ OHNO_FACTORIES = {
     [colour.temperature.uv_to_CCT_Ohno2013, IJK_SD_XY, IJK_HD_XY, IJK_UHD_XY]
 }
 
-RGB_benchmark_factory(OHNO_FACTORIES, __name__)
+IJK_benchmark_factory(OHNO_FACTORIES, __name__)

@@ -8,7 +8,7 @@ from __future__ import division, unicode_literals
 from functools import partial
 import colour
 import os
-from benchmarks.factories.RGB import RGB_benchmark_factory
+from benchmarks.factories.RGB import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -25,4 +25,4 @@ CIE_IPT_FACTORIES = {
     'IPT_hue_angle': colour.models.IPT_hue_angle,
 }
 
-RGB_benchmark_factory(CIE_IPT_FACTORIES, __name__)
+IJK_benchmark_factory(CIE_IPT_FACTORIES, __name__)

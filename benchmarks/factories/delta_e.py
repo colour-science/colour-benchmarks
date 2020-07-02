@@ -20,7 +20,7 @@ __status__ = 'Production'
 
 __all__ = [
     'RESOURCES_DIRECTORY', 'IJK_SD', 'IJK_HD', 'IJK_UHD',
-    'DIFFERENCESBenchmarkFactory', 'DIFFERENCES_benchmark_factory'
+    'DeltaEBenchmarkFactory', 'DeltaE_benchmark_factory'
 ]
 
 RESOURCES_DIRECTORY = os.path.abspath(
@@ -33,7 +33,7 @@ IJK_UHD = colour.read_image(
     os.path.join(RESOURCES_DIRECTORY, 'testImage4K.jpg'))
 
 
-class DIFFERENCESBenchmarkFactory(ABC):
+class DeltaEBenchmarkFactory(ABC):
     def __init__(self):
         super().__init__()
 
@@ -53,11 +53,11 @@ class DIFFERENCESBenchmarkFactory(ABC):
         self._run_callable(self._ijk_uhd, self._ijk_uhd)
 
 
-def DIFFERENCES_benchmark_factory(factories, modulename=__name__,
-                                  install=True):
+def DeltaE_benchmark_factory(factories, modulename=__name__,
+                             install=True):
     classes = []
     for factory, callable_ in factories.items():
-        class_ = type(factory, (DIFFERENCESBenchmarkFactory, ), {})
+        class_ = type(factory, (DeltaEBenchmarkFactory,), {})
         if type(callable_) == list:
             class_._callable = staticmethod(callable_[0])
             class_._ijk_sd = callable_[1]

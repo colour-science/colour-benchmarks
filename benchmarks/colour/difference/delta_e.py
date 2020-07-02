@@ -9,7 +9,7 @@ from functools import partial
 import colour
 import os
 import numpy as np
-from benchmarks.factories.differences import DIFFERENCES_benchmark_factory
+from benchmarks.factories.differences import DeltaE_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -27,4 +27,4 @@ DELTAE_FACTORIES = {
     'delta_E_CMC': colour.difference.delta_E_CMC,
 }
 
-DIFFERENCES_benchmark_factory(DELTAE_FACTORIES, __name__)
+DeltaE_benchmark_factory(DELTAE_FACTORIES, __name__)

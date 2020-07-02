@@ -8,7 +8,7 @@ from __future__ import division, unicode_literals
 from functools import partial
 import colour
 import os
-from benchmarks.factories.RGB import RGB_benchmark_factory
+from benchmarks.factories.RGB import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -30,4 +30,4 @@ REDLOG_FACTORIES = {
     'log_decoding_Log3G12': colour.models.log_decoding_Log3G12,
 }
 
-RGB_benchmark_factory(REDLOG_FACTORIES, __name__)
+IJK_benchmark_factory(REDLOG_FACTORIES, __name__)
