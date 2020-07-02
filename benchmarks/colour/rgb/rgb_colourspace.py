@@ -30,13 +30,15 @@ _RGB_to_XYZ = partial(
     colour.models.RGB_to_XYZ,
     illuminant_RGB=_illuminant_RGB,
     illuminant_XYZ=_illuminant_XYZ,
-    RGB_to_XYZ_matrix=colour.models.ADOBE_RGB_1998_COLOURSPACE.RGB_to_XYZ_matrix)
+    RGB_to_XYZ_matrix=colour.models.ADOBE_RGB_1998_COLOURSPACE.
+    RGB_to_XYZ_matrix)
 
 _XYZ_to_RGB = partial(
     colour.models.XYZ_to_RGB,
     illuminant_RGB=_illuminant_RGB,
     illuminant_XYZ=_illuminant_XYZ,
-    XYZ_to_RGB_matrix = colour.models.ADOBE_RGB_1998_COLOURSPACE.XYZ_to_RGB_matrix)
+    XYZ_to_RGB_matrix=colour.models.ADOBE_RGB_1998_COLOURSPACE.
+    XYZ_to_RGB_matrix)
 
 _RGB_luminance = partial(
     colour.models.RGB_luminance,
@@ -48,13 +50,13 @@ COLOURSPACE_FACTORIES = {
     'RGB_luminance': _RGB_luminance,
     'RGB_to_XYZ': _RGB_to_XYZ,
     'XYZ_to_RGB': _XYZ_to_RGB
-
 }
 
 RGB_benchmark_factory(COLOURSPACE_FACTORIES, __name__)
 
-class RGB_to_RGB_matrix():
 
+class RGB_to_RGB_matrix():
     def time_func(self):
-        colour.models.RGB_to_RGB_matrix(input_colourspace=colour.models.sRGB_COLOURSPACE,
-    output_colourspace=colour.models.PROPHOTO_RGB_COLOURSPACE)
+        colour.models.RGB_to_RGB_matrix(
+            input_colourspace=colour.models.sRGB_COLOURSPACE,
+            output_colourspace=colour.models.PROPHOTO_RGB_COLOURSPACE)

@@ -28,7 +28,6 @@ RIMMROMM_FACTORIES = {
     'cctf_decoding_RIMMRGB': colour.models.cctf_decoding_RIMMRGB,
     'log_encoding_ERIMMRGB': colour.models.log_encoding_ERIMMRGB,
     'log_decoding_ERIMMRGB': colour.models.log_decoding_ERIMMRGB,
-
 }
 
 RGB_benchmark_factory(RIMMROMM_FACTORIES, __name__)

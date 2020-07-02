@@ -20,7 +20,6 @@ __status__ = 'Production'
 
 __all__ = ['CIE_CAM_FACTORIES']
 
-
 CIE_CAM_FACTORIES = {
     'JMh_CAM16_to_CAM16LCD': colour.models.JMh_CAM16_to_CAM16LCD,
     'CAM16LCD_to_JMh_CAM16': colour.models.CAM16LCD_to_JMh_CAM16,

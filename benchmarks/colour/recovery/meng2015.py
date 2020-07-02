@@ -20,7 +20,7 @@ __status__ = 'Production'
 
 __all__ = ['MENG']
 
-class MENG():
 
+class MENG():
     def time_func(self):
-        colour.recovery.XYZ_to_sd_Meng2015(np.array([1,2,2]))
+        colour.recovery.XYZ_to_sd_Meng2015(np.array([1, 2, 2]))

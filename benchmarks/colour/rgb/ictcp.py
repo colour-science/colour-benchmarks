@@ -20,9 +20,8 @@ __status__ = 'Production'
 __all__ = ['ICTCP_FACTORIES']
 
 ICTCP_FACTORIES = {
-    'RGB_to_ICTCP':colour.models.RGB_to_ICTCP,
+    'RGB_to_ICTCP': colour.models.RGB_to_ICTCP,
     'ICTCP_to_RGB': colour.models.ICTCP_to_RGB,
-
 }
 
 RGB_benchmark_factory(ICTCP_FACTORIES, __name__)

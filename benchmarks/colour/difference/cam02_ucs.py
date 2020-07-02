@@ -21,7 +21,6 @@ __status__ = 'Production'
 
 __all__ = ['CAM02_FACTORIES']
 
-
 CAM02_FACTORIES = {
     'delta_E_CAM02SCD': colour.difference.delta_E_CAM02SCD,
     'delta_E_CAM02LCD': colour.difference.delta_E_CAM02LCD,
@@ -29,4 +28,3 @@ CAM02_FACTORIES = {
 }
 
 DIFFERENCES_benchmark_factory(CAM02_FACTORIES, __name__)
-

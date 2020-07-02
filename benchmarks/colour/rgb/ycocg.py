@@ -20,7 +20,7 @@ __status__ = 'Production'
 __all__ = ['YCOCG_FACTORIES']
 
 YCOCG_FACTORIES = {
-    'RGB_to_YCoCg':colour.models.RGB_to_YCoCg,
+    'RGB_to_YCoCg': colour.models.RGB_to_YCoCg,
     'YCoCg_to_RGB': colour.models.YCoCg_to_RGB,
 }
 

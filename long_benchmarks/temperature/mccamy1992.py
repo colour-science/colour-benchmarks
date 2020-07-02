@@ -10,7 +10,7 @@ import colour
 import os
 import numpy as np
 from benchmarks.factories.RGB import RGB_benchmark_factory
-from benchmarks.factories.RGB import IJK_SD,IJK_HD,IJK_UHD
+from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -21,20 +21,23 @@ __status__ = 'Production'
 
 __all__ = ['MCCAMY_FACTORIES']
 
-IJK_SD_XY = IJK_SD[:,:,0:2]
-IJK_HD_XY = IJK_HD[:,:,0:2]
-IJK_UHD_XY = IJK_UHD[:,:,0:2]
+IJK_SD_XY = IJK_SD[:, :, 0:2]
+IJK_HD_XY = IJK_HD[:, :, 0:2]
+IJK_UHD_XY = IJK_UHD[:, :, 0:2]
 
-IJK_SD_LIMITED = IJK_SD[0:50,0:50,0:2]
-IJK_HD_LIMITED = IJK_HD[0:100,0:100,0:2]
-IJK_UHD_LIMITED = IJK_UHD[0:200,0:200,0:2]
+IJK_SD_LIMITED = IJK_SD[0:50, 0:50, 0:2]
+IJK_HD_LIMITED = IJK_HD[0:100, 0:100, 0:2]
+IJK_UHD_LIMITED = IJK_UHD[0:200, 0:200, 0:2]
 
 MCCAMY_FACTORIES = {
-    'CCT_to_xy_McCamy1992': [colour.temperature.CCT_to_xy_McCamy1992,
-                        IJK_SD_LIMITED, IJK_HD_LIMITED, IJK_UHD_LIMITED],
-    'xy_to_CCT_McCamy1992': [colour.temperature.xy_to_CCT_McCamy1992,
-                        IJK_SD_XY, IJK_HD_XY, IJK_UHD_XY]
+    'CCT_to_xy_McCamy1992': [
+        colour.temperature.CCT_to_xy_McCamy1992, IJK_SD_LIMITED,
+        IJK_HD_LIMITED, IJK_UHD_LIMITED
+    ],
+    'xy_to_CCT_McCamy1992': [
+        colour.temperature.xy_to_CCT_McCamy1992, IJK_SD_XY, IJK_HD_XY,
+        IJK_UHD_XY
+    ]
 }
 
 RGB_benchmark_factory(MCCAMY_FACTORIES, __name__)
-
