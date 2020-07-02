@@ -8,7 +8,7 @@ from __future__ import division, unicode_literals
 from functools import partial
 import colour
 import os
-from benchmarks.factories.RGB import RGB_benchmark_factory
+from benchmarks.factories.RGB import IJK_benchmark_factory
 from colour.utilities import (CaseInsensitiveMapping)
 
 __author__ = 'Colour Developers'
@@ -29,4 +29,4 @@ CIE_CAM_FACTORIES = {
     'CAM16UCS_to_JMh_CAM16': colour.models.CAM16UCS_to_JMh_CAM16,
 }
 
-RGB_benchmark_factory(CIE_CAM_FACTORIES, __name__)
+IJK_benchmark_factory(CIE_CAM_FACTORIES, __name__)

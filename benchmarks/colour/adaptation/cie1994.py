@@ -9,7 +9,7 @@ from functools import partial
 import colour
 import numpy as np
 import os
-from benchmarks.factories.RGB import RGB_benchmark_factory
+from benchmarks.factories.RGB import IJK_benchmark_factory
 from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
 
 __author__ = 'Colour Developers'
@@ -35,4 +35,4 @@ CIE1994_FACTORIES = {
     'chromatic_adaptation_CIE1994': _CIE1994,
 }
 
-RGB_benchmark_factory(CIE1994_FACTORIES, __name__)
+IJK_benchmark_factory(CIE1994_FACTORIES, __name__)

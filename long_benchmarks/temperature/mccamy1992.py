@@ -9,7 +9,7 @@ from functools import partial
 import colour
 import os
 import numpy as np
-from benchmarks.factories.RGB import RGB_benchmark_factory
+from benchmarks.factories.RGB import IJK_benchmark_factory
 from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
 
 __author__ = 'Colour Developers'
@@ -40,4 +40,4 @@ MCCAMY_FACTORIES = {
     ]
 }
 
-RGB_benchmark_factory(MCCAMY_FACTORIES, __name__)
+IJK_benchmark_factory(MCCAMY_FACTORIES, __name__)

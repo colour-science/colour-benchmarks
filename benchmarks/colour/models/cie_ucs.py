@@ -8,7 +8,7 @@ from __future__ import division, unicode_literals
 from functools import partial
 import colour
 import os
-from benchmarks.factories.RGB import RGB_benchmark_factory
+from benchmarks.factories.RGB import IJK_benchmark_factory
 from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
 
 __author__ = 'Colour Developers'
@@ -38,4 +38,4 @@ CIE_UCS_FACTORIES = {
     [colour.models.xy_to_UCS_uv, IJK_SD_XY, IJK_HD_XY, IJK_UHD_XY],
 }
 
-RGB_benchmark_factory(CIE_UCS_FACTORIES, __name__)
+IJK_benchmark_factory(CIE_UCS_FACTORIES, __name__)

@@ -9,7 +9,7 @@ from functools import partial
 import colour
 import os
 import numpy as np
-from benchmarks.factories.differences import DIFFERENCES_benchmark_factory
+from benchmarks.factories.differences import DeltaE_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -22,4 +22,4 @@ __all__ = ['DIN_FACTORIES']
 
 DIN_FACTORIES = {'delta_E_DIN99': colour.difference.delta_E_DIN99}
 
-DIFFERENCES_benchmark_factory(DIN_FACTORIES, __name__)
+DeltaE_benchmark_factory(DIN_FACTORIES, __name__)

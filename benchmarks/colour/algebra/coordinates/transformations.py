@@ -9,7 +9,7 @@ from functools import partial
 import colour
 import os
 import numpy as np
-from benchmarks.factories.RGB import RGB_benchmark_factory
+from benchmarks.factories.RGB import IJK_benchmark_factory
 from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
 
 __author__ = 'Colour Developers'
@@ -44,4 +44,4 @@ TRANSFORMATIONS_FACTORIES = {
     colour.algebra.cylindrical_to_cartesian,
 }
 
-RGB_benchmark_factory(TRANSFORMATIONS_FACTORIES, __name__)
+IJK_benchmark_factory(TRANSFORMATIONS_FACTORIES, __name__)

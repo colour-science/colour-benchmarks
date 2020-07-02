@@ -8,7 +8,7 @@ from __future__ import division, unicode_literals
 from functools import partial
 import colour
 import os
-from benchmarks.factories.RGB import RGB_benchmark_factory
+from benchmarks.factories.RGB import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -24,4 +24,4 @@ SMPTE_FACTORIES = {
     'eotf_SMPTE240M': colour.models.eotf_SMPTE240M,
 }
 
-RGB_benchmark_factory(SMPTE_FACTORIES, __name__)
+IJK_benchmark_factory(SMPTE_FACTORIES, __name__)
