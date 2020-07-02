@@ -5,10 +5,9 @@
 """
 
 from __future__ import division, unicode_literals
-from functools import partial
+
 import colour
-import os
-import numpy as np
+
 from benchmarks.factories.differences import DeltaE_benchmark_factory
 
 __author__ = 'Colour Developers'
