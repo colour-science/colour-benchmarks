@@ -5,12 +5,11 @@
 """
 
 from __future__ import division, unicode_literals
-from functools import partial
+
 import colour
-import os
-import numpy as np
+
 from benchmarks.factories.RGB import IJK_benchmark_factory
-from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
+from benchmarks.factories.RGB import IJK_UHD
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'

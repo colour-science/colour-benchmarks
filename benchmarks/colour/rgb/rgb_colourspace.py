@@ -5,9 +5,10 @@
 """
 
 from __future__ import division, unicode_literals
-from functools import partial
+
 import colour
-import os
+from functools import partial
+
 from benchmarks.factories.RGB import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
