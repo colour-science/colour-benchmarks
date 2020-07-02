@@ -22,7 +22,6 @@ __all__ = ['COMMON_FACTORIES']
 COMMON_FACTORIES = {
     'sRGB_to_XYZ': colour.models.sRGB_to_XYZ,
     'XYZ_to_sRGB': colour.models.XYZ_to_sRGB,
-
 }
 
 RGB_benchmark_factory(COMMON_FACTORIES, __name__)

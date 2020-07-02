@@ -10,7 +10,7 @@ import colour
 import os
 import numpy as np
 from benchmarks.factories.RGB import RGB_benchmark_factory
-from benchmarks.factories.RGB import IJK_SD,IJK_HD,IJK_UHD
+from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -23,11 +23,12 @@ __all__ = ['ARRAY_FACTORIES']
 
 _dot_vector = partial(
     colour.utilities.dot_vector,
-    v = np.array([0.20654008, 0.12197225, 0.05136952]))
+    v=np.array([0.20654008, 0.12197225, 0.05136952]))
 
 _linear_conversion = partial(
     colour.utilities.linear_conversion,
-    old_range= np.array([0,360]), new_range=np.array([0,1]))
+    old_range=np.array([0, 360]),
+    new_range=np.array([0, 1]))
 
 ARRAY_FACTORIES = {
     'as_array': colour.utilities.as_array,
@@ -46,24 +47,24 @@ ARRAY_FACTORIES = {
 
 RGB_benchmark_factory(ARRAY_FACTORIES, __name__)
 
-class dot_matrix():
 
+class dot_matrix():
     def time_sd(self):
-        colour.utilities.dot_matrix(IJK_SD,IJK_SD)
+        colour.utilities.dot_matrix(IJK_SD, IJK_SD)
 
     def time_hd(self):
-        colour.utilities.dot_matrix(IJK_HD,IJK_HD)
+        colour.utilities.dot_matrix(IJK_HD, IJK_HD)
 
     def time_uhd(self):
-        colour.utilities.dot_matrix(IJK_UHD,IJK_UHD)
+        colour.utilities.dot_matrix(IJK_UHD, IJK_UHD)
+
 
 class lerp():
-
     def time_sd(self):
-        colour.utilities.lerp(IJK_SD,IJK_SD,IJK_SD)
+        colour.utilities.lerp(IJK_SD, IJK_SD, IJK_SD)
 
     def time_hd(self):
-        colour.utilities.lerp(IJK_HD,IJK_HD,IJK_HD)
+        colour.utilities.lerp(IJK_HD, IJK_HD, IJK_HD)
 
     def time_uhd(self):
-        colour.utilities.lerp(IJK_UHD,IJK_UHD,IJK_UHD)
+        colour.utilities.lerp(IJK_UHD, IJK_UHD, IJK_UHD)

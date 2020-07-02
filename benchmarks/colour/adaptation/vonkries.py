@@ -10,7 +10,7 @@ import colour
 import numpy as np
 import os
 from benchmarks.factories.RGB import RGB_benchmark_factory
-from benchmarks.factories.RGB import IJK_SD,IJK_HD,IJK_UHD
+from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -21,28 +21,26 @@ __status__ = 'Production'
 
 __all__ = ['']
 
+
 class chromatic_adaptation_matrix_VonKries():
     def time_sd(self):
-        colour.adaptation.chromatic_adaptation_matrix_VonKries(IJK_SD,
-        IJK_SD)
+        colour.adaptation.chromatic_adaptation_matrix_VonKries(IJK_SD, IJK_SD)
 
     def time_hd(self):
-        colour.adaptation.chromatic_adaptation_matrix_VonKries(IJK_HD,
-        IJK_HD)
+        colour.adaptation.chromatic_adaptation_matrix_VonKries(IJK_HD, IJK_HD)
 
     def time_uhd(self):
-        colour.adaptation.chromatic_adaptation_matrix_VonKries(IJK_UHD,
-        IJK_UHD)
+        colour.adaptation.chromatic_adaptation_matrix_VonKries(
+            IJK_UHD, IJK_UHD)
+
 
 class chromatic_adaptation_VonKries():
     def time_sd(self):
-        colour.adaptation.chromatic_adaptation_VonKries(IJK_SD,
-        IJK_SD, IJK_SD)
+        colour.adaptation.chromatic_adaptation_VonKries(IJK_SD, IJK_SD, IJK_SD)
 
     def time_hd(self):
-        colour.adaptation.chromatic_adaptation_VonKries(IJK_HD,
-        IJK_HD, IJK_HD)
+        colour.adaptation.chromatic_adaptation_VonKries(IJK_HD, IJK_HD, IJK_HD)
 
     def time_uhd(self):
-        colour.adaptation.chromatic_adaptation_VonKries(IJK_UHD,
-        IJK_UHD, IJK_UHD)
+        colour.adaptation.chromatic_adaptation_VonKries(
+            IJK_UHD, IJK_UHD, IJK_UHD)

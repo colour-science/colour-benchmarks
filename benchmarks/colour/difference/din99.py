@@ -20,9 +20,6 @@ __status__ = 'Production'
 
 __all__ = ['DIN_FACTORIES']
 
-DIN_FACTORIES = {
-    'delta_E_DIN99': colour.difference.delta_E_DIN99
-}
+DIN_FACTORIES = {'delta_E_DIN99': colour.difference.delta_E_DIN99}
 
 DIFFERENCES_benchmark_factory(DIN_FACTORIES, __name__)
-

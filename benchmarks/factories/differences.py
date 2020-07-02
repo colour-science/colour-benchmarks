@@ -23,31 +23,38 @@ __all__ = [
     'DIFFERENCESBenchmarkFactory', 'DIFFERENCES_benchmark_factory'
 ]
 
-RESOURCES_DIRECTORY = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..','data'))
-IJK_SD = colour.read_image(os.path.join(RESOURCES_DIRECTORY, 'testImageSD.jpg'))
-IJK_HD = colour.read_image(os.path.join(RESOURCES_DIRECTORY, 'testImageHD.jpg'))
-IJK_UHD = colour.read_image(os.path.join(RESOURCES_DIRECTORY, 'testImage4K.jpg'))
+RESOURCES_DIRECTORY = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), '..', 'data'))
+IJK_SD = colour.read_image(
+    os.path.join(RESOURCES_DIRECTORY, 'testImageSD.jpg'))
+IJK_HD = colour.read_image(
+    os.path.join(RESOURCES_DIRECTORY, 'testImageHD.jpg'))
+IJK_UHD = colour.read_image(
+    os.path.join(RESOURCES_DIRECTORY, 'testImage4K.jpg'))
+
 
 class DIFFERENCESBenchmarkFactory(ABC):
     def __init__(self):
         super().__init__()
 
-    def _run_callable(self, data,data2):
+    def _run_callable(self, data, data2):
         if not hasattr(self, '_callable'):
             return
 
-        self._callable(data,data2)
+        self._callable(data, data2)
 
     def time_sd(self):
-        self._run_callable(self._ijk_sd,self._ijk_sd)
+        self._run_callable(self._ijk_sd, self._ijk_sd)
 
     def time_hd(self):
-        self._run_callable(self._ijk_hd,self._ijk_hd)
+        self._run_callable(self._ijk_hd, self._ijk_hd)
 
     def time_uhd(self):
-        self._run_callable(self._ijk_uhd,self._ijk_uhd)
+        self._run_callable(self._ijk_uhd, self._ijk_uhd)
 
-def DIFFERENCES_benchmark_factory(factories, modulename=__name__, install=True):
+
+def DIFFERENCES_benchmark_factory(factories, modulename=__name__,
+                                  install=True):
     classes = []
     for factory, callable_ in factories.items():
         class_ = type(factory, (DIFFERENCESBenchmarkFactory, ), {})

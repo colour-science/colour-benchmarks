@@ -28,7 +28,6 @@ REDLOG_FACTORIES = {
     'log_decoding_Log3G10': colour.models.log_decoding_Log3G10,
     'log_encoding_Log3G12': colour.models.log_encoding_Log3G12,
     'log_decoding_Log3G12': colour.models.log_decoding_Log3G12,
-
 }
 
 RGB_benchmark_factory(REDLOG_FACTORIES, __name__)

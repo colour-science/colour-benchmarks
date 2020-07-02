@@ -19,8 +19,6 @@ __status__ = 'Production'
 
 __all__ = ['GAMMA_FACTORIES']
 
-GAMMA_FACTORIES = {
-    'gamma_function': colour.models.gamma_function
-}
+GAMMA_FACTORIES = {'gamma_function': colour.models.gamma_function}
 
 RGB_benchmark_factory(GAMMA_FACTORIES, __name__)

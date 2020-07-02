@@ -25,8 +25,6 @@ DELTAE_FACTORIES = {
     'delta_E_CIE1994': colour.difference.delta_E_CIE1994,
     'delta_E_CIE2000': colour.difference.delta_E_CIE2000,
     'delta_E_CMC': colour.difference.delta_E_CMC,
-
 }
 
 DIFFERENCES_benchmark_factory(DELTAE_FACTORIES, __name__)
-

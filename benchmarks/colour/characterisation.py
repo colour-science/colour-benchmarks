@@ -9,7 +9,7 @@ from functools import partial
 import colour
 import numpy as np
 import os
-from benchmarks.factories.RGB import IJK_SD,IJK_HD,IJK_UHD
+from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -25,82 +25,96 @@ prng = np.random.RandomState(2)
 M_T_1 = prng.random_sample((345600, 3))
 M_R_1 = M_T_1 + (prng.random_sample((345600, 3)) - 0.5) * 0.5
 M_T_2 = prng.random_sample((921600, 3))
-M_R_2 =M_T_2 + (prng.random_sample((921600, 3)) - 0.5) * 0.5
+M_R_2 = M_T_2 + (prng.random_sample((921600, 3)) - 0.5) * 0.5
 M_T_3 = prng.random_sample((2073600, 3))
 M_R_3 = M_T_3 + (prng.random_sample((2073600, 3)) - 0.5) * 0.5
 
-class colour_correction_matrix_Finlayson2015():
 
+class colour_correction_matrix_Finlayson2015():
     def time_sd(self):
-        colour.characterisation.colour_correction_matrix_Finlayson2015(M_T_1,M_R_1)
+        colour.characterisation.colour_correction_matrix_Finlayson2015(
+            M_T_1, M_R_1)
 
     def time_hd(self):
-        colour.characterisation.colour_correction_matrix_Finlayson2015(M_T_2,M_R_2)
+        colour.characterisation.colour_correction_matrix_Finlayson2015(
+            M_T_2, M_R_2)
 
     def time_uhd(self):
-        colour.characterisation.colour_correction_matrix_Finlayson2015(M_T_3,M_R_3)
+        colour.characterisation.colour_correction_matrix_Finlayson2015(
+            M_T_3, M_R_3)
+
 
 class colour_correction_matrix_Vandermonde():
-
     def time_sd(self):
-        colour.characterisation.colour_correction_matrix_Vandermonde(M_T_1,M_R_1)
+        colour.characterisation.colour_correction_matrix_Vandermonde(
+            M_T_1, M_R_1)
 
     def time_hd(self):
-        colour.characterisation.colour_correction_matrix_Vandermonde(M_T_2,M_R_2)
+        colour.characterisation.colour_correction_matrix_Vandermonde(
+            M_T_2, M_R_2)
 
     def time_uhd(self):
-        colour.characterisation.colour_correction_matrix_Vandermonde(M_T_3,M_R_3)
+        colour.characterisation.colour_correction_matrix_Vandermonde(
+            M_T_3, M_R_3)
 
 
 class colour_correction_matrix_Cheung2004():
-
     def time_sd(self):
-        colour.characterisation.colour_correction_matrix_Cheung2004(M_T_1,M_R_1)
+        colour.characterisation.colour_correction_matrix_Cheung2004(
+            M_T_1, M_R_1)
 
     def time_hd(self):
-        colour.characterisation.colour_correction_matrix_Cheung2004(M_T_2,M_R_2)
+        colour.characterisation.colour_correction_matrix_Cheung2004(
+            M_T_2, M_R_2)
 
     def time_uhd(self):
-        colour.characterisation.colour_correction_matrix_Cheung2004(M_T_3,M_R_3)
+        colour.characterisation.colour_correction_matrix_Cheung2004(
+            M_T_3, M_R_3)
 
 
 class colour_correction_Finlayson2015():
-
     def time_sd(self):
-        colour.characterisation.colour_correction_Finlayson2015(M_T_1,M_T_1,M_R_1)
+        colour.characterisation.colour_correction_Finlayson2015(
+            M_T_1, M_T_1, M_R_1)
 
     def time_hd(self):
-        colour.characterisation.colour_correction_Finlayson2015(M_T_2,M_T_2,M_R_2)
+        colour.characterisation.colour_correction_Finlayson2015(
+            M_T_2, M_T_2, M_R_2)
 
     def time_uhd(self):
-        colour.characterisation.colour_correction_Finlayson2015(M_T_3,M_T_3,M_R_3)
+        colour.characterisation.colour_correction_Finlayson2015(
+            M_T_3, M_T_3, M_R_3)
+
 
 class colour_correction_Vandermonde():
-
     def time_sd(self):
-        colour.characterisation.colour_correction_Vandermonde(M_T_1,M_T_1,M_R_1)
+        colour.characterisation.colour_correction_Vandermonde(
+            M_T_1, M_T_1, M_R_1)
 
     def time_hd(self):
-        colour.characterisation.colour_correction_Vandermonde(M_T_2,M_T_2,M_R_2)
+        colour.characterisation.colour_correction_Vandermonde(
+            M_T_2, M_T_2, M_R_2)
 
     def time_uhd(self):
-        colour.characterisation.colour_correction_Vandermonde(M_T_3,M_T_3,M_R_3)
+        colour.characterisation.colour_correction_Vandermonde(
+            M_T_3, M_T_3, M_R_3)
 
 
 class colour_correction_Cheung2004():
-
     def time_sd(self):
-        colour.characterisation.colour_correction_Cheung2004(M_T_1,M_T_1,M_R_1)
+        colour.characterisation.colour_correction_Cheung2004(
+            M_T_1, M_T_1, M_R_1)
 
     def time_hd(self):
-        colour.characterisation.colour_correction_Cheung2004(M_T_2,M_T_2,M_R_2)
+        colour.characterisation.colour_correction_Cheung2004(
+            M_T_2, M_T_2, M_R_2)
 
     def time_uhd(self):
-        colour.characterisation.colour_correction_Cheung2004(M_T_3,M_T_3,M_R_3)
+        colour.characterisation.colour_correction_Cheung2004(
+            M_T_3, M_T_3, M_R_3)
 
 
 class augmented_matrix_Cheung2004():
-
     def time_sd(self):
         colour.characterisation.augmented_matrix_Cheung2004(IJK_SD)
 
@@ -110,8 +124,8 @@ class augmented_matrix_Cheung2004():
     def time_uhd(self):
         colour.characterisation.augmented_matrix_Cheung2004(IJK_UHD)
 
-class polynomial_expansion_Vandermonde():
 
+class polynomial_expansion_Vandermonde():
     def time_sd(self):
         colour.characterisation.polynomial_expansion_Vandermonde(IJK_SD)
 
@@ -123,7 +137,6 @@ class polynomial_expansion_Vandermonde():
 
 
 class polynomial_expansion_Finlayson2015():
-
     def time_sd(self):
         colour.characterisation.polynomial_expansion_Finlayson2015(IJK_SD)
 

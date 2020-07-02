@@ -19,7 +19,6 @@ __status__ = 'Production'
 
 __all__ = ['CYLINDRICAL_FACTORIES']
 
-
 CYLINDRICAL_FACTORIES = {
     'RGB_to_HSL': colour.models.RGB_to_HSL,
     'RGB_to_HSV': colour.models.RGB_to_HSV,

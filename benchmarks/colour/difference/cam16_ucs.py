@@ -27,4 +27,3 @@ CAM16_FACTORIES = {
 }
 
 DIFFERENCES_benchmark_factory(CAM16_FACTORIES, __name__)
-

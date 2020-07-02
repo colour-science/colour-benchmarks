@@ -9,7 +9,7 @@ from functools import partial
 import colour
 import numpy as np
 import os
-from benchmarks.factories.RGB import IJK_SD,IJK_HD,IJK_UHD
+from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -20,6 +20,7 @@ __status__ = 'Production'
 
 __all__ = ['']
 
+
 class normalise_vector():
     def time_sd(self):
         colour.algebra.normalise_vector(IJK_SD)
@@ -29,6 +30,7 @@ class normalise_vector():
 
     def time_uhd(self):
         colour.algebra.normalise_vector(IJK_UHD)
+
 
 class euclidean_distance():
     def time_sd(self):

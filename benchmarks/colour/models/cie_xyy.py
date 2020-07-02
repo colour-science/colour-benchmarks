@@ -9,7 +9,7 @@ from functools import partial
 import colour
 import os
 from benchmarks.factories.RGB import RGB_benchmark_factory
-from benchmarks.factories.RGB import IJK_SD,IJK_HD,IJK_UHD
+from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -29,10 +29,8 @@ CIE_XYY_FACTORIES = {
     'xyY_to_XYZ': colour.models.xyY_to_XYZ,
     'xyY_to_xy': colour.models.xyY_to_xy,
     'XYZ_to_xy': colour.models.XYZ_to_xy,
-    'xy_to_XYZ': [colour.models.xy_to_XYZ,IJK_SD_XY,
-                  IJK_HD_XY,IJK_UHD_XY],
-    'xy_to_xyY': [colour.models.xy_to_xyY,IJK_SD_XY,
-                  IJK_HD_XY,IJK_UHD_XY],
+    'xy_to_XYZ': [colour.models.xy_to_XYZ, IJK_SD_XY, IJK_HD_XY, IJK_UHD_XY],
+    'xy_to_xyY': [colour.models.xy_to_xyY, IJK_SD_XY, IJK_HD_XY, IJK_UHD_XY],
 }
 
 RGB_benchmark_factory(CIE_XYY_FACTORIES, __name__)

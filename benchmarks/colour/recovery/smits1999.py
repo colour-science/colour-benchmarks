@@ -21,8 +21,7 @@ __status__ = 'Production'
 
 __all__ = ['SMITS_FACTORIES']
 
+
 class Smits():
-
     def time_func(self):
-        colour.recovery.RGB_to_sd_Smits1999(np.array([1,2,2]))
-
+        colour.recovery.RGB_to_sd_Smits1999(np.array([1, 2, 2]))

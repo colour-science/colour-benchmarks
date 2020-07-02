@@ -49,7 +49,7 @@ def clean(ctx, bytecode=False):
 
 
 @task
-def formatting(ctx, yapf=False, asciify=True):
+def formatting(ctx, yapf=True, asciify=True):
     """
     Formats the codebase with *Yapf*, converts unicode characters to ASCII and
     cleanup the "BibTeX" file.
@@ -71,7 +71,7 @@ def formatting(ctx, yapf=False, asciify=True):
 
     if yapf:
         message_box('Formatting codebase with "Yapf"...')
-        ctx.run('yapf -p -i -r --exclude \'.git\' .')
+        ctx.run('yapf -p -i -r --exclude \'.git\' --exclude \'env\' .')
 
     if asciify:
         message_box('Converting unicode characters to ASCII...')
