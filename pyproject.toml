@@ -48,6 +48,7 @@ invoke = { version = "*", optional = true }  # Development dependency.
 nose = { version = "*", optional = true }  # Development dependency.
 pre-commit = { version = "*", optional = true }  # Development dependency.
 pytest = { version = "*", optional = true }  # Development dependency.
+restructuredtext-lint = { version = "*", optional = true }  # Development dependency.
 yapf = { version = "0.23", optional = true }  # Development dependency.
 
 [tool.poetry.dev-dependencies]
@@ -57,6 +58,7 @@ invoke = "*"
 nose = "*"
 pre-commit = "*"
 pytest = "*"
+restructuredtext-lint = "*"
 yapf = "*"
 
 [tool.poetry.extras]
@@ -67,6 +69,7 @@ development = [
     "nose",
     "pre",
     "pytest",
+    "restructuredtext-lint",
     "yapf"
 ]
 
