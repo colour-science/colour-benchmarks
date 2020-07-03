@@ -17,13 +17,13 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['YCBCR_FACTORIES']
+__all__ = ['YCBCR_factories']
 
-YCBCR_FACTORIES = {
+YCBCR_factories = {
     'RGB_to_YcCbcCrc': colour.models.RGB_to_YcCbcCrc,
     'RGB_to_YCbCr': colour.models.RGB_to_YCbCr,
     'YcCbcCrc_to_RGB': colour.models.YcCbcCrc_to_RGB,
     'YCbCr_to_RGB': colour.models.YCbCr_to_RGB,
 }
 
-IJK_benchmark_factory(YCBCR_FACTORIES, __name__)
+IJK_benchmark_factory(YCBCR_factories, __name__)

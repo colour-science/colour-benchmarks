@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['COMMON_FACTORIES']
+__all__ = ['common_factories']
 
-COMMON_FACTORIES = {
+common_factories = {
     'sRGB_to_XYZ': colour.models.sRGB_to_XYZ,
     'XYZ_to_sRGB': colour.models.XYZ_to_sRGB,
 }
 
-IJK_benchmark_factory(COMMON_FACTORIES, __name__)
+IJK_benchmark_factory(common_factories, __name__)

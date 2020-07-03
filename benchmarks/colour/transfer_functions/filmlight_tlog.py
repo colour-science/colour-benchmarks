@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['FILMLIGHTTLOG_FACTORIES']
+__all__ = ['FILMLIGHT_TLOG_factories']
 
-FILMLIGHTTLOG_FACTORIES = {
+FILMLIGHT_TLOG_factories = {
     'log_encoding_FilmLightTLog': colour.models.log_encoding_FilmLightTLog,
     'log_decoding_FilmLightTLog': colour.models.log_decoding_FilmLightTLog,
 }
 
-IJK_benchmark_factory(FILMLIGHTTLOG_FACTORIES, __name__)
+IJK_benchmark_factory(FILMLIGHT_TLOG_factories, __name__)

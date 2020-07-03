@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['DICOMGSDF_FACTORIES']
+__all__ = ['DICOM_GSDF_factories']
 
-DICOMGSDF_FACTORIES = {
+DICOM_GSDF_factories = {
     'eotf_DICOMGSDF': colour.models.eotf_DICOMGSDF,
     'eotf_inverse_DICOMGSDF': colour.models.eotf_inverse_DICOMGSDF,
 }
 
-IJK_benchmark_factory(DICOMGSDF_FACTORIES, __name__)
+IJK_benchmark_factory(DICOM_GSDF_factories, __name__)

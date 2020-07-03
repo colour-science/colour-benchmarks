@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CIE_COMMON_FACTORIES']
+__all__ = ['common_factories']
 
-CIE_COMMON_FACTORIES = {
+common_factories = {
     'Jab_to_JCh': colour.models.Jab_to_JCh,
     'JCh_to_Jab': colour.models.JCh_to_Jab,
 }
 
-IJK_benchmark_factory(CIE_COMMON_FACTORIES, __name__)
+IJK_benchmark_factory(common_factories, __name__)

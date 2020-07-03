@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['VIPERLOG_FACTORIES']
+__all__ = ['VIPER_LOG_factories']
 
-VIPERLOG_FACTORIES = {
+VIPERLOG_factories = {
     'log_encoding_ViperLog': colour.models.log_encoding_ViperLog,
     'log_decoding_ViperLog': colour.models.log_decoding_ViperLog,
 }
 
-IJK_benchmark_factory(VIPERLOG_FACTORIES, __name__)
+IJK_benchmark_factory(VIPERLOG_factories, __name__)

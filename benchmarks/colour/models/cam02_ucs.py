@@ -17,9 +17,9 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CIE_CAM_FACTORIES']
+__all__ = ['cam02_ucs_factories']
 
-CIE_CAM_FACTORIES = {
+cam02_ucs_factories = {
     'JMh_CAM16_to_CAM16LCD': colour.models.JMh_CAM16_to_CAM16LCD,
     'CAM16LCD_to_JMh_CAM16': colour.models.CAM16LCD_to_JMh_CAM16,
     'JMh_CAM16_to_CAM16SCD': colour.models.JMh_CAM16_to_CAM16SCD,
@@ -28,4 +28,4 @@ CIE_CAM_FACTORIES = {
     'CAM16UCS_to_JMh_CAM16': colour.models.CAM16UCS_to_JMh_CAM16,
 }
 
-IJK_benchmark_factory(CIE_CAM_FACTORIES, __name__)
+IJK_benchmark_factory(cam02_ucs_factories, __name__)

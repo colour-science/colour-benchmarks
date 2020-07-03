@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 "colour.recovery" sub-package Benchmarks
-======================================
+========================================
 """
 
 from __future__ import division, unicode_literals
@@ -16,9 +16,9 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['SMITS_FACTORIES']
+__all__ = ['Smits1999']
 
 
-class Smits():
+class Smits1999():
     def time_func(self):
         colour.recovery.RGB_to_sd_Smits1999(np.array([1, 2, 2]))

@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['DJIDLOG_FACTORIES']
+__all__ = ['DJI_DLOG_factories']
 
-DJIDLOG_FACTORIES = {
+DJI_DLOG_factories = {
     'log_encoding_DJIDLog': colour.models.log_encoding_DJIDLog,
     'log_decoding_DJIDLog': colour.models.log_decoding_DJIDLog,
 }
 
-IJK_benchmark_factory(DJIDLOG_FACTORIES, __name__)
+IJK_benchmark_factory(DJI_DLOG_factories, __name__)

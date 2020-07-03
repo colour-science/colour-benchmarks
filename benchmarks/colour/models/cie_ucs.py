@@ -18,13 +18,13 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CIE_UCS_FACTORIES']
+__all__ = ['cie_ucs_factories']
 
 IJK_SD_XY = colour.models.UCS_to_uv(IJK_SD)
 IJK_HD_XY = colour.models.UCS_to_uv(IJK_HD)
 IJK_UHD_XY = colour.models.UCS_to_uv(IJK_UHD)
 
-CIE_UCS_FACTORIES = {
+cie_ucs_factories = {
     'XYZ_to_UCS':
     colour.models.XYZ_to_UCS,
     'UCS_to_XYZ':
@@ -38,4 +38,4 @@ CIE_UCS_FACTORIES = {
     [colour.models.xy_to_UCS_uv, IJK_SD_XY, IJK_HD_XY, IJK_UHD_XY],
 }
 
-IJK_benchmark_factory(CIE_UCS_FACTORIES, __name__)
+IJK_benchmark_factory(cie_ucs_factories, __name__)

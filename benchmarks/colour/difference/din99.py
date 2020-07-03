@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 "colour.difference" sub-package Benchmarks
-======================================
+==========================================
 """
 
 from __future__ import division, unicode_literals
@@ -17,8 +17,8 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['DIN_FACTORIES']
+__all__ = ['din_factories']
 
-DIN_FACTORIES = {'delta_E_DIN99': colour.difference.delta_E_DIN99}
+din_factories = {'delta_E_DIN99': colour.difference.delta_E_DIN99}
 
-DeltaE_benchmark_factory(DIN_FACTORIES, __name__)
+DeltaE_benchmark_factory(din_factories, __name__)

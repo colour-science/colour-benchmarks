@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['DCDM_FACTORIES']
+__all__ = ['DCDM_factories']
 
-DCDM_FACTORIES = {
+DCDM_factories = {
     'eotf_DCDM': colour.models.eotf_DCDM,
     'eotf_inverse_DCDM': colour.models.eotf_inverse_DCDM,
 }
 
-IJK_benchmark_factory(DCDM_FACTORIES, __name__)
+IJK_benchmark_factory(DCDM_factories, __name__)

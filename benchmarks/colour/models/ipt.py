@@ -17,12 +17,12 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CIE_IPT_FACTORIES']
+__all__ = ['ipt_factories']
 
-CIE_IPT_FACTORIES = {
+ipt_factories = {
     'XYZ_to_IPT': colour.models.XYZ_to_IPT,
     'IPT_to_XYZ': colour.models.IPT_to_XYZ,
     'IPT_hue_angle': colour.models.IPT_hue_angle,
 }
 
-IJK_benchmark_factory(CIE_IPT_FACTORIES, __name__)
+IJK_benchmark_factory(ipt_factories, __name__)

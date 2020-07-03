@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CIE_UVW_FACTORIES']
+__all__ = ['cie_uvw_factories']
 
-CIE_UVW_FACTORIES = {
+cie_uvw_factories = {
     'XYZ_to_UVW': colour.models.XYZ_to_UVW,
     'UVW_to_XYZ': colour.models.UVW_to_XYZ,
 }
 
-IJK_benchmark_factory(CIE_UVW_FACTORIES, __name__)
+IJK_benchmark_factory(cie_uvw_factories, __name__)

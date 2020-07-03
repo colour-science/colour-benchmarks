@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 "colour.appearance" sub-package Benchmarks
-======================================
+==========================================
 """
 
 from __future__ import division, unicode_literals

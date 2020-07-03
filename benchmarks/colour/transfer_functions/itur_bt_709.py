@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['BT709_FACTORIES']
+__all__ = ['BT709_factories']
 
-BT709_FACTORIES = {
+BT709_factories = {
     'oetf_BT709': colour.models.oetf_BT709,
     'oetf_inverse_BT709': colour.models.oetf_inverse_BT709,
 }
 
-IJK_benchmark_factory(BT709_FACTORIES, __name__)
+IJK_benchmark_factory(BT709_factories, __name__)

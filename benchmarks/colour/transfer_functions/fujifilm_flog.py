@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['FLOG_FACTORIES']
+__all__ = ['FLOG_factories']
 
-FLOG_FACTORIES = {
+FLOG_factories = {
     'log_encoding_FLog': colour.models.log_encoding_FLog,
     'log_decoding_FLog': colour.models.log_decoding_FLog,
 }
 
-IJK_benchmark_factory(FLOG_FACTORIES, __name__)
+IJK_benchmark_factory(FLOG_factories, __name__)

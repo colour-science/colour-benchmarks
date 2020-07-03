@@ -17,8 +17,8 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['GAMMA_FACTORIES']
+__all__ = ['GAMMA_factories']
 
-GAMMA_FACTORIES = {'gamma_function': colour.models.gamma_function}
+GAMMA_factories = {'gamma_function': colour.models.gamma_function}
 
-IJK_benchmark_factory(GAMMA_FACTORIES, __name__)
+IJK_benchmark_factory(GAMMA_factories, __name__)

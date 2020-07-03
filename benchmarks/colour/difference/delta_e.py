@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 "colour.difference" sub-package Benchmarks
-======================================
+==========================================
 """
 
 from __future__ import division, unicode_literals
@@ -17,13 +17,13 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['DELTAE_FACTORIES']
+__all__ = ['delta_e_factories']
 
-DELTAE_FACTORIES = {
+delta_e_factories = {
     'delta_E_CIE1976': colour.difference.delta_E_CIE1976,
     'delta_E_CIE1994': colour.difference.delta_E_CIE1994,
     'delta_E_CIE2000': colour.difference.delta_E_CIE2000,
     'delta_E_CMC': colour.difference.delta_E_CMC,
 }
 
-DeltaE_benchmark_factory(DELTAE_FACTORIES, __name__)
+DeltaE_benchmark_factory(delta_e_factories, __name__)

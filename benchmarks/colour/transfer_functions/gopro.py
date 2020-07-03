@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['GOPRO_FACTORIES']
+__all__ = ['GOPRO_factories']
 
-GOPRO_FACTORIES = {
+GOPRO_factories = {
     'log_encoding_Protune': colour.models.log_encoding_Protune,
     'log_decoding_Protune': colour.models.log_decoding_Protune,
 }
 
-IJK_benchmark_factory(GOPRO_FACTORIES, __name__)
+IJK_benchmark_factory(GOPRO_factories, __name__)

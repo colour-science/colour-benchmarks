@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['VLOG_FACTORIES']
+__all__ = ['VLOG_factories']
 
-VLOG_FACTORIES = {
+VLOG_factories = {
     'log_encoding_VLog': colour.models.log_encoding_VLog,
     'log_decoding_VLog': colour.models.log_decoding_VLog,
 }
 
-IJK_benchmark_factory(VLOG_FACTORIES, __name__)
+IJK_benchmark_factory(VLOG_factories, __name__)

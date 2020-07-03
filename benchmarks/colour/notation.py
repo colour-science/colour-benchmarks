@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 "colour.notation" sub-package Benchmarks
-======================================
+========================================
 """
 
 from __future__ import division, unicode_literals
@@ -18,17 +18,16 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['NOTATION_FACTORIES']
+__all__ = ['NOTATION_factories']
 
 RGB = [0.6667, 0.45, 0.8]
 HEX = colour.notation.RGB_to_HEX(RGB)
 
-NOTATION_FACTORIES = {
+NOTATION_factories = {
     'munsell_value_Priest1920': colour.notation.munsell_value_Priest1920,
     'munsell_value_Munsell1933': colour.notation.munsell_value_Munsell1933,
     'munsell_value_Moon1943': colour.notation.munsell_value_Moon1943,
-    'munsell_value_Saunderson1944':
-    colour.notation.munsell_value_Saunderson1944,
+    'munsell_value_Saunderson1944': colour.notation.munsell_value_Saunderson1944,
     'munsell_value_Ladd1955': colour.notation.munsell_value_Ladd1955,
     'munsell_value_McCamy1987': colour.notation.munsell_value_McCamy1987,
     'munsell_value_ASTMD1535': colour.notation.munsell_value_ASTMD1535,
@@ -50,4 +49,4 @@ class HEX_to_RGB():
         colour.notation.HEX_to_RGB(HEX)
 
 
-IJK_benchmark_factory(NOTATION_FACTORIES, __name__)
+IJK_benchmark_factory(NOTATION_factories, __name__)

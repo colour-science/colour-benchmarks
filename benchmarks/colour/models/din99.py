@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CIE_DIN_FACTORIES']
+__all__ = ['cie_din_factories']
 
-CIE_DIN_FACTORIES = {
+cie_din_factories = {
     'Lab_to_DIN99': colour.models.Lab_to_DIN99,
     'DIN99_to_Lab': colour.models.DIN99_to_Lab,
 }
 
-IJK_benchmark_factory(CIE_DIN_FACTORIES, __name__)
+IJK_benchmark_factory(cie_din_factories, __name__)

@@ -18,13 +18,13 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CMY_FACTORIES']
+__all__ = ['CMY_factories']
 
 IJK_SD_CMYK = colour.models.CMY_to_CMYK(IJK_SD)
 IJK_HD_CMYK = colour.models.CMY_to_CMYK(IJK_HD)
 IJK_UHD_CMYK = colour.models.CMY_to_CMYK(IJK_UHD)
 
-CMY_FACTORIES = {
+CMY_factories = {
     'RGB_to_CMY':
     colour.models.RGB_to_CMY,
     'CMY_to_RGB':
@@ -35,4 +35,4 @@ CMY_FACTORIES = {
     [colour.models.CMYK_to_CMY, IJK_SD_CMYK, IJK_HD_CMYK, IJK_UHD_CMYK],
 }
 
-IJK_benchmark_factory(CMY_FACTORIES, __name__)
+IJK_benchmark_factory(CMY_factories, __name__)

@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CIE_IJZAZBZ_FACTORIES']
+__all__ = ['jzazbz_factories']
 
-CIE_IJZAZBZ_FACTORIES = {
+jzazbz_factories = {
     'XYZ_to_JzAzBz': colour.models.XYZ_to_JzAzBz,
     'JzAzBz_to_XYZ': colour.models.JzAzBz_to_XYZ,
 }
 
-IJK_benchmark_factory(CIE_IJZAZBZ_FACTORIES, __name__)
+IJK_benchmark_factory(jzazbz_factories, __name__)

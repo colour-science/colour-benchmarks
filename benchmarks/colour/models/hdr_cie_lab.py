@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CIE_DIR_FACTORIES']
+__all__ = ['hdr_cie_lab_factories']
 
-CIE_DIR_FACTORIES = {
+hdr_cie_lab_factories = {
     'XYZ_to_hdr_CIELab': colour.models.XYZ_to_hdr_CIELab,
     'hdr_CIELab_to_XYZ': colour.models.hdr_CIELab_to_XYZ,
 }
 
-IJK_benchmark_factory(CIE_DIR_FACTORIES, __name__)
+IJK_benchmark_factory(hdr_cie_lab_factories, __name__)

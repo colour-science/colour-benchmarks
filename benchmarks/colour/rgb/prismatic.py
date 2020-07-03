@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['PRISMATIC_FACTORIES']
+__all__ = ['prismatic_factories']
 
-PRISMATIC_FACTORIES = {
+prismatic_factories = {
     'RGB_to_Prismatic': colour.models.RGB_to_Prismatic,
     'Prismatic_to_RGB': colour.models.Prismatic_to_RGB
 }
 
-IJK_benchmark_factory(PRISMATIC_FACTORIES, __name__)
+IJK_benchmark_factory(prismatic_factories, __name__)

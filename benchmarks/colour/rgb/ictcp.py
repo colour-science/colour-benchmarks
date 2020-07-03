@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['ICTCP_FACTORIES']
+__all__ = ['ICTCP_factories']
 
-ICTCP_FACTORIES = {
+ICTCP_factories = {
     'RGB_to_ICTCP': colour.models.RGB_to_ICTCP,
     'ICTCP_to_RGB': colour.models.ICTCP_to_RGB,
 }
 
-IJK_benchmark_factory(ICTCP_FACTORIES, __name__)
+IJK_benchmark_factory(ICTCP_factories, __name__)

@@ -17,9 +17,9 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['BT2100_FACTORIES']
+__all__ = ['BT2100_factories']
 
-BT2100_FACTORIES = {
+BT2100_factories = {
     'oetf_PQ_BT2100': colour.models.oetf_PQ_BT2100,
     'oetf_inverse_PQ_BT2100': colour.models.oetf_inverse_PQ_BT2100,
     'eotf_PQ_BT2100': colour.models.eotf_PQ_BT2100,
@@ -34,4 +34,4 @@ BT2100_FACTORIES = {
     'ootf_inverse_HLG_BT2100': colour.models.ootf_inverse_HLG_BT2100,
 }
 
-IJK_benchmark_factory(BT2100_FACTORIES, __name__)
+IJK_benchmark_factory(BT2100_factories, __name__)

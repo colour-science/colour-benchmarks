@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 "colour.utilities" sub-package Benchmarks
-======================================
+=========================================
 """
 
 from __future__ import division, unicode_literals
@@ -17,9 +17,9 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['COMMON_FACTORIES']
+__all__ = ['COMMON_factories']
 
-COMMON_FACTORIES = {
+COMMON_factories = {
     'to_domain_1': colour.utilities.to_domain_1,
     'to_domain_10': colour.utilities.to_domain_10,
     'to_domain_100': colour.utilities.to_domain_1,
@@ -32,4 +32,4 @@ COMMON_FACTORIES = {
     'from_range_int': colour.utilities.from_range_int,
 }
 
-IJK_benchmark_factory(COMMON_FACTORIES, __name__)
+IJK_benchmark_factory(COMMON_factories, __name__)

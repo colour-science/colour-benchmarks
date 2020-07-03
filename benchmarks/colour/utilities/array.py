@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 "colour.utilities" sub-package Benchmarks
-======================================
+=========================================
 """
 
 from __future__ import division, unicode_literals
@@ -20,7 +20,7 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['ARRAY_FACTORIES']
+__all__ = ['ARRAY_factories']
 
 _dot_vector = partial(
     colour.utilities.dot_vector,
@@ -31,7 +31,7 @@ _linear_conversion = partial(
     old_range=np.array([0, 360]),
     new_range=np.array([0, 1]))
 
-ARRAY_FACTORIES = {
+ARRAY_factories = {
     'as_array': colour.utilities.as_array,
     'as_int_array': colour.utilities.as_int_array,
     'as_float_array': colour.utilities.as_float_array,
@@ -46,7 +46,7 @@ ARRAY_FACTORIES = {
     'linear_conversion': _linear_conversion,
 }
 
-IJK_benchmark_factory(ARRAY_FACTORIES, __name__)
+IJK_benchmark_factory(ARRAY_factories, __name__)
 
 
 class dot_matrix():

@@ -17,12 +17,12 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CIE_HUNTER_FACTORIES']
+__all__ = ['hunter_lab_factories']
 
-CIE_HUNTER_FACTORIES = {
+hunter_lab_factories = {
     'XYZ_to_Hunter_Lab': colour.models.XYZ_to_Hunter_Lab,
     'Hunter_Lab_to_XYZ': colour.models.Hunter_Lab_to_XYZ,
     'XYZ_to_K_ab_HunterLab1966': colour.models.XYZ_to_K_ab_HunterLab1966,
 }
 
-IJK_benchmark_factory(CIE_HUNTER_FACTORIES, __name__)
+IJK_benchmark_factory(hunter_lab_factories, __name__)

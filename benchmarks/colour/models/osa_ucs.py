@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CIE_OSA_UCS_FACTORIES']
+__all__ = ['osa_ucs_factories']
 
-CIE_OSA_UCS_FACTORIES = {
+osa_ucs_factories = {
     'XYZ_to_OSA_UCS': colour.models.XYZ_to_OSA_UCS,
     # 'OSA_UCS_to_XYZ': colour.models.OSA_UCS_to_XYZ,
 }
 
-IJK_benchmark_factory(CIE_OSA_UCS_FACTORIES, __name__)
+IJK_benchmark_factory(osa_ucs_factories, __name__)

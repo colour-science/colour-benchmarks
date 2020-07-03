@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['YCOCG_FACTORIES']
+__all__ = ['YCOCG_factories']
 
-YCOCG_FACTORIES = {
+YCOCG_factories = {
     'RGB_to_YCoCg': colour.models.RGB_to_YCoCg,
     'YCoCg_to_RGB': colour.models.YCoCg_to_RGB,
 }
 
-IJK_benchmark_factory(YCOCG_FACTORIES, __name__)
+IJK_benchmark_factory(YCOCG_factories, __name__)

@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CINEON_FACTORIES']
+__all__ = ['CINEON_factories']
 
-CINEON_FACTORIES = {
+CINEON_factories = {
     'log_encoding_Cineon': colour.models.log_encoding_Cineon,
     'log_decoding_Cineon': colour.models.log_decoding_Cineon,
 }
 
-IJK_benchmark_factory(CINEON_FACTORIES, __name__)
+IJK_benchmark_factory(CINEON_factories, __name__)

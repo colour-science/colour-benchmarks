@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['ALEXALOG_FACTORIES']
+__all__ = ['ALEXALOG_factories']
 
-ALEXALOG_FACTORIES = {
+ALEXALOG_factories = {
     'log_encoding_ALEXALogC': colour.models.log_encoding_ALEXALogC,
     'log_decoding_ALEXALogC': colour.models.log_decoding_ALEXALogC,
 }
 
-IJK_benchmark_factory(ALEXALOG_FACTORIES, __name__)
+IJK_benchmark_factory(ALEXALOG_factories, __name__)

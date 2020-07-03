@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['SRGB_FACTORIES']
+__all__ = ['SRGB_factories']
 
-SRGB_FACTORIES = {
+SRGB_factories = {
     'eotf_sRGB': colour.models.eotf_sRGB,
     'eotf_inverse_sRGB': colour.models.eotf_inverse_sRGB,
 }
 
-IJK_benchmark_factory(SRGB_FACTORIES, __name__)
+IJK_benchmark_factory(SRGB_factories, __name__)

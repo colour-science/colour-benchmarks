@@ -17,9 +17,9 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CANONLOG_FACTORIES']
+__all__ = ['CANONLOG_factories']
 
-CANONLOG_FACTORIES = {
+CANONLOG_factories = {
     'log_encoding_CanonLog': colour.models.log_encoding_CanonLog,
     'log_decoding_CanonLog': colour.models.log_decoding_CanonLog,
     'log_encoding_CanonLog2': colour.models.log_encoding_CanonLog2,
@@ -28,4 +28,4 @@ CANONLOG_FACTORIES = {
     'log_decoding_CanonLog3': colour.models.log_decoding_CanonLog3,
 }
 
-IJK_benchmark_factory(CANONLOG_FACTORIES, __name__)
+IJK_benchmark_factory(CANONLOG_factories, __name__)

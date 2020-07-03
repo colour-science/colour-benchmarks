@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['ST2084_FACTORIES']
+__all__ = ['ST2084_factories']
 
-ST2084_FACTORIES = {
+ST2084_factories = {
     'eotf_ST2084': colour.models.eotf_ST2084,
     'eotf_inverse_ST2084': colour.models.eotf_inverse_ST2084,
 }
 
-IJK_benchmark_factory(ST2084_FACTORIES, __name__)
+IJK_benchmark_factory(ST2084_factories, __name__)

@@ -18,7 +18,7 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['COLOURSPACE_FACTORIES']
+__all__ = ['RGB_colourspace_factories','RGB_to_RGB_matrix']
 
 _illuminant_XYZ = [0.34570, 0.35850]
 _illuminant_RGB = [0.31270, 0.32900]
@@ -46,14 +46,14 @@ _RGB_luminance = partial(
     primaries=colour.models.ADOBE_RGB_1998_COLOURSPACE.primaries,
     whitepoint=colour.models.ADOBE_RGB_1998_COLOURSPACE.whitepoint)
 
-COLOURSPACE_FACTORIES = {
+RGB_colourspace_factories = {
     'RGB_to_RGB': _RGB_to_RGB,
     'RGB_luminance': _RGB_luminance,
     'RGB_to_XYZ': _RGB_to_XYZ,
     'XYZ_to_RGB': _XYZ_to_RGB
 }
 
-IJK_benchmark_factory(COLOURSPACE_FACTORIES, __name__)
+IJK_benchmark_factory(RGB_colourspace_factories, __name__)
 
 
 class RGB_to_RGB_matrix():

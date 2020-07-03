@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 "colour.adaptations" sub-package Benchmarks
-======================================
+===========================================
 """
 
 from __future__ import division, unicode_literals
@@ -34,10 +34,12 @@ class chromatic_adaptation_matrix_VonKries():
 
 class chromatic_adaptation_VonKries():
     def time_sd(self):
-        colour.adaptation.chromatic_adaptation_VonKries(IJK_SD, IJK_SD, IJK_SD)
+        colour.adaptation.chromatic_adaptation_VonKries(
+            IJK_SD, IJK_SD, IJK_SD)
 
     def time_hd(self):
-        colour.adaptation.chromatic_adaptation_VonKries(IJK_HD, IJK_HD, IJK_HD)
+        colour.adaptation.chromatic_adaptation_VonKries(
+            IJK_HD, IJK_HD, IJK_HD)
 
     def time_uhd(self):
         colour.adaptation.chromatic_adaptation_VonKries(

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 "colour.adaptation" sub-package Benchmarks
-======================================
+==========================================
 """
 
 from __future__ import division, unicode_literals
@@ -19,7 +19,7 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CIE1994_FACTORIES']
+__all__ = ['CIE1994_factories']
 
 test_arr = np.array([0.4476, 0.4074])
 
@@ -31,8 +31,8 @@ _CIE1994 = partial(
     E_o1=1000,
     E_o2=1000)
 
-CIE1994_FACTORIES = {
+CIE1994_factories = {
     'chromatic_adaptation_CIE1994': _CIE1994,
 }
 
-IJK_benchmark_factory(CIE1994_FACTORIES, __name__)
+IJK_benchmark_factory(CIE1994_factories, __name__)

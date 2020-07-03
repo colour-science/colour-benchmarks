@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['FILMICPRO_FACTORIES']
+__all__ = ['FILMIC_PRO_factories']
 
-FILMICPRO_FACTORIES = {
+FILMIC_PRO_factories = {
     'log_encoding_FilmicPro6': colour.models.log_encoding_FilmicPro6,
     'log_decoding_FilmicPro6': colour.models.log_decoding_FilmicPro6,
 }
 
-IJK_benchmark_factory(FILMICPRO_FACTORIES, __name__)
+IJK_benchmark_factory(FILMIC_PRO_factories, __name__)

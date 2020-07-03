@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['ARIB_FACTORIES']
+__all__ = ['ARIB_factories']
 
-ARIB_FACTORIES = {
+ARIB_factories = {
     'oetf_ARIBSTDB67': colour.models.oetf_ARIBSTDB67,
     'oetf_inverse_ARIBSTDB67': colour.models.oetf_inverse_ARIBSTDB67,
 }
 
-IJK_benchmark_factory(ARIB_FACTORIES, __name__)
+IJK_benchmark_factory(ARIB_factories, __name__)

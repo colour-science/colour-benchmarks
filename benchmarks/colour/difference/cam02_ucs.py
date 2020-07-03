@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 "colour.difference" sub-package Benchmarks
-======================================
+==========================================
 """
 
 from __future__ import division, unicode_literals
@@ -17,12 +17,12 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CAM02_FACTORIES']
+__all__ = ['delta_e_cam_factories']
 
-CAM02_FACTORIES = {
+delta_e_cam_factories = {
     'delta_E_CAM02SCD': colour.difference.delta_E_CAM02SCD,
     'delta_E_CAM02LCD': colour.difference.delta_E_CAM02LCD,
     'delta_E_CAM02UCS': colour.difference.delta_E_CAM02UCS,
 }
 
-DeltaE_benchmark_factory(CAM02_FACTORIES, __name__)
+DeltaE_benchmark_factory(delta_e_cam_factories, __name__)

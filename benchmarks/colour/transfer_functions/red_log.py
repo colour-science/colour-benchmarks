@@ -17,9 +17,9 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['REDLOG_FACTORIES']
+__all__ = ['REDLOG_factories']
 
-REDLOG_FACTORIES = {
+REDLOG_factories = {
     'log_encoding_REDLog': colour.models.log_encoding_REDLog,
     'log_decoding_REDLog': colour.models.log_decoding_REDLog,
     'log_encoding_REDLogFilm': colour.models.log_encoding_REDLogFilm,
@@ -30,4 +30,4 @@ REDLOG_FACTORIES = {
     'log_decoding_Log3G12': colour.models.log_decoding_Log3G12,
 }
 
-IJK_benchmark_factory(REDLOG_FACTORIES, __name__)
+IJK_benchmark_factory(REDLOG_factories, __name__)

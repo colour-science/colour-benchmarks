@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['PIVOTEDLOG_FACTORIES']
+__all__ = ['PIVOTEDLOG_factories']
 
-PIVOTEDLOG_FACTORIES = {
+PIVOTEDLOG_factories = {
     'log_encoding_PivotedLog': colour.models.log_encoding_PivotedLog,
     'log_decoding_PivotedLog': colour.models.log_decoding_PivotedLog,
 }
 
-IJK_benchmark_factory(PIVOTEDLOG_FACTORIES, __name__)
+IJK_benchmark_factory(PIVOTEDLOG_factories, __name__)

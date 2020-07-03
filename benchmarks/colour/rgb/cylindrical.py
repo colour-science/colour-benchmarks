@@ -17,13 +17,13 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CYLINDRICAL_FACTORIES']
+__all__ = ['cylindrical_factories']
 
-CYLINDRICAL_FACTORIES = {
+cylindrical_factories = {
     'RGB_to_HSL': colour.models.RGB_to_HSL,
     'RGB_to_HSV': colour.models.RGB_to_HSV,
     'HSL_to_RGB': colour.models.HSL_to_RGB,
     'HSV_to_RGB': colour.models.HSV_to_RGB,
 }
 
-IJK_benchmark_factory(CYLINDRICAL_FACTORIES, __name__)
+IJK_benchmark_factory(cylindrical_factories, __name__)
