@@ -8,7 +8,7 @@ from __future__ import division, unicode_literals
 
 import colour
 
-from benchmarks.factories.RGB import IJK_benchmark_factory
+from benchmarks.factories.ijk import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['DJI_DLOG_factories']
+__all__ = ['DjiDlogFactories']
 
-DJI_DLOG_factories = {
+DjiDlogFactories = {
     'log_encoding_DJIDLog': colour.models.log_encoding_DJIDLog,
     'log_decoding_DJIDLog': colour.models.log_decoding_DJIDLog,
 }
 
-IJK_benchmark_factory(DJI_DLOG_factories, __name__)
+IJK_benchmark_factory(DjiDlogFactories, __name__)

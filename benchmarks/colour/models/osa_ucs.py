@@ -8,7 +8,7 @@ from __future__ import division, unicode_literals
 
 import colour
 
-from benchmarks.factories.RGB import IJK_benchmark_factory
+from benchmarks.factories.ijk import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['osa_ucs_factories']
+__all__ = ['OsaUcsFactories']
 
-osa_ucs_factories = {
+OsaUcsFactories = {
     'XYZ_to_OSA_UCS': colour.models.XYZ_to_OSA_UCS,
     # 'OSA_UCS_to_XYZ': colour.models.OSA_UCS_to_XYZ,
 }
 
-IJK_benchmark_factory(osa_ucs_factories, __name__)
+IJK_benchmark_factory(OsaUcsFactories, __name__)

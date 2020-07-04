@@ -8,7 +8,7 @@ from __future__ import division, unicode_literals
 
 import colour
 
-from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
+from benchmarks.factories.ijk import IJK_SD, IJK_HD, IJK_UHD
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -17,10 +17,10 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['']
+__all__ = []
 
 
-class is_within_visible_spectrum():
+class IsWithinVisibleSpectrum():
     timeout = 120.0
 
     def time_sd(self):
@@ -33,7 +33,7 @@ class is_within_visible_spectrum():
         colour.volume.is_within_visible_spectrum(IJK_UHD)
 
 
-class is_within_pointer_gamut():
+class IsWithinPointerGamut():
     def time_sd(self):
         colour.volume.is_within_pointer_gamut(IJK_SD)
 
@@ -44,13 +44,13 @@ class is_within_pointer_gamut():
         colour.volume.is_within_pointer_gamut(IJK_UHD)
 
 
-class is_within_macadam_limits():
+class IsWithinMacadamLimits():
     def time_sd(self):
         colour.volume.is_within_macadam_limits(IJK_SD, 'A')
 
     def time_hd(self):
         colour.volume.is_within_macadam_limits(IJK_HD, 'A')
 
-    #Fail
+    # Fail
     def time_uhd(self):
         colour.volume.is_within_macadam_limits(IJK_UHD, 'A')

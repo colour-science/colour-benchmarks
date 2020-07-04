@@ -9,7 +9,7 @@ from __future__ import division, unicode_literals
 import colour
 import numpy as np
 
-from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD, LUT_TABLE
+from benchmarks.factories.ijk import IJK_SD, IJK_HD, IJK_UHD, LUT_TABLE
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -18,12 +18,12 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['']
+__all__ = []
 
 prng = np.random.RandomState(4)
 
 
-class table_interpolation_trilinear():
+class TableInterpolationTrilinear():
     def time_sd(self):
         V_xyz = colour.algebra.random_triplet_generator(
             345600, random_state=prng)
@@ -40,7 +40,7 @@ class table_interpolation_trilinear():
         colour.algebra.table_interpolation_trilinear(V_xyz, LUT_TABLE)
 
 
-class table_interpolation_tetrahedral():
+class TableInterpolationTetrahedral():
     def time_sd(self):
         V_xyz = colour.algebra.random_triplet_generator(
             345600, random_state=prng)
@@ -57,14 +57,14 @@ class table_interpolation_tetrahedral():
         colour.algebra.table_interpolation_tetrahedral(V_xyz, LUT_TABLE)
 
 
-class least_square_mapping_MoorePenrose():
+class LeastSquareMappingMoorePenrose():
     def time_sd(self):
         colour.algebra.least_square_mapping_MoorePenrose(IJK_SD, IJK_SD)
 
-    #Fail
+    # Fail
     def time_hd(self):
         colour.algebra.least_square_mapping_MoorePenrose(IJK_HD, IJK_HD)
 
-    #Fail
+    # Fail
     def time_uhd(self):
         colour.algebra.least_square_mapping_MoorePenrose(IJK_UHD, IJK_UHD)

@@ -53,11 +53,10 @@ class DeltaEBenchmarkFactory(ABC):
         self._run_callable(self._ijk_uhd, self._ijk_uhd)
 
 
-def DeltaE_benchmark_factory(factories, modulename=__name__,
-                             install=True):
+def DeltaE_benchmark_factory(factories, modulename=__name__, install=True):
     classes = []
     for factory, callable_ in factories.items():
-        class_ = type(factory, (DeltaEBenchmarkFactory,), {})
+        class_ = type(factory, (DeltaEBenchmarkFactory, ), {})
         if type(callable_) == list:
             class_._callable = staticmethod(callable_[0])
             class_._ijk_sd = callable_[1]

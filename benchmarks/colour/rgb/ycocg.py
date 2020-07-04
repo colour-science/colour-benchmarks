@@ -8,7 +8,7 @@ from __future__ import division, unicode_literals
 
 import colour
 
-from benchmarks.factories.RGB import IJK_benchmark_factory
+from benchmarks.factories.ijk import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['YCOCG_factories']
+__all__ = ['YcocgFactories']
 
-YCOCG_factories = {
+YcocgFactories = {
     'RGB_to_YCoCg': colour.models.RGB_to_YCoCg,
     'YCoCg_to_RGB': colour.models.YCoCg_to_RGB,
 }
 
-IJK_benchmark_factory(YCOCG_factories, __name__)
+IJK_benchmark_factory(YcocgFactories, __name__)

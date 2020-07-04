@@ -8,8 +8,8 @@ from __future__ import division, unicode_literals
 
 import colour
 
-from benchmarks.factories.RGB import IJK_benchmark_factory
-from benchmarks.factories.RGB import IJK_SD
+from benchmarks.factories.ijk import IJK_benchmark_factory
+from benchmarks.factories.ijk import IJK_SD
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -18,23 +18,24 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['NOTATION_factories']
+__all__ = ['NotationFactories']
 
 RGB = [0.6667, 0.45, 0.8]
 HEX = colour.notation.RGB_to_HEX(RGB)
 
-NOTATION_factories = {
+NotationFactories = {
     'munsell_value_Priest1920': colour.notation.munsell_value_Priest1920,
     'munsell_value_Munsell1933': colour.notation.munsell_value_Munsell1933,
     'munsell_value_Moon1943': colour.notation.munsell_value_Moon1943,
-    'munsell_value_Saunderson1944': colour.notation.munsell_value_Saunderson1944,
+    'munsell_value_Saunderson1944':
+    colour.notation.munsell_value_Saunderson1944,
     'munsell_value_Ladd1955': colour.notation.munsell_value_Ladd1955,
     'munsell_value_McCamy1987': colour.notation.munsell_value_McCamy1987,
     'munsell_value_ASTMD1535': colour.notation.munsell_value_ASTMD1535,
 }
 
 
-class xyY_to_munsell_colour():
+class xyY_to_munsell_Colour():
     def time_func(self):
         colour.notation.xyY_to_munsell_colour(IJK_SD[0:10, 0:10, :])
 
@@ -49,4 +50,4 @@ class HEX_to_RGB():
         colour.notation.HEX_to_RGB(HEX)
 
 
-IJK_benchmark_factory(NOTATION_factories, __name__)
+IJK_benchmark_factory(NotationFactories, __name__)

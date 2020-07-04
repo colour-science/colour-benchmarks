@@ -8,7 +8,7 @@ from __future__ import division, unicode_literals
 
 import colour
 
-from benchmarks.factories.RGB import IJK_benchmark_factory
+from benchmarks.factories.ijk import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -17,12 +17,12 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['ipt_factories']
+__all__ = ['IptFactories']
 
-ipt_factories = {
+IptFactories = {
     'XYZ_to_IPT': colour.models.XYZ_to_IPT,
     'IPT_to_XYZ': colour.models.IPT_to_XYZ,
     'IPT_hue_angle': colour.models.IPT_hue_angle,
 }
 
-IJK_benchmark_factory(ipt_factories, __name__)
+IJK_benchmark_factory(IptFactories, __name__)

@@ -19,7 +19,7 @@ __status__ = 'Production'
 specification = colour.appearance.CIECAM02_Specification(
     J=41.731207905126638, C=0.103355738709070, h=217.067959767393010)
 
-__all__ = ['']
+__all__ = []
 
 array = np.array([1, 2, 3])
 

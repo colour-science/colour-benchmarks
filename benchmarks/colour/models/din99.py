@@ -8,7 +8,7 @@ from __future__ import division, unicode_literals
 
 import colour
 
-from benchmarks.factories.RGB import IJK_benchmark_factory
+from benchmarks.factories.ijk import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['cie_din_factories']
+__all__ = ['CieDinFactories']
 
-cie_din_factories = {
+CieDinFactories = {
     'Lab_to_DIN99': colour.models.Lab_to_DIN99,
     'DIN99_to_Lab': colour.models.DIN99_to_Lab,
 }
 
-IJK_benchmark_factory(cie_din_factories, __name__)
+IJK_benchmark_factory(CieDinFactories, __name__)

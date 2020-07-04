@@ -10,7 +10,7 @@ import colour
 import numpy as np
 from functools import partial
 
-from benchmarks.factories.RGB import IJK_benchmark_factory
+from benchmarks.factories.ijk import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -19,7 +19,7 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CIE1994_factories']
+__all__ = ['Cie1994Factories']
 
 test_arr = np.array([0.4476, 0.4074])
 
@@ -31,8 +31,8 @@ _CIE1994 = partial(
     E_o1=1000,
     E_o2=1000)
 
-CIE1994_factories = {
+Cie1994Factories = {
     'chromatic_adaptation_CIE1994': _CIE1994,
 }
 
-IJK_benchmark_factory(CIE1994_factories, __name__)
+IJK_benchmark_factory(Cie1994Factories, __name__)

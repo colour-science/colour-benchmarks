@@ -10,8 +10,8 @@ import colour
 import numpy as np
 from functools import partial
 
-from benchmarks.factories.RGB import IJK_benchmark_factory
-from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
+from benchmarks.factories.ijk import IJK_benchmark_factory
+from benchmarks.factories.ijk import IJK_SD, IJK_HD, IJK_UHD
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -20,7 +20,7 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['ARRAY_factories']
+__all__ = ['ArrayFactories']
 
 _dot_vector = partial(
     colour.utilities.dot_vector,
@@ -31,7 +31,7 @@ _linear_conversion = partial(
     old_range=np.array([0, 360]),
     new_range=np.array([0, 1]))
 
-ARRAY_factories = {
+ArrayFactories = {
     'as_array': colour.utilities.as_array,
     'as_int_array': colour.utilities.as_int_array,
     'as_float_array': colour.utilities.as_float_array,
@@ -46,18 +46,21 @@ ARRAY_factories = {
     'linear_conversion': _linear_conversion,
 }
 
-IJK_benchmark_factory(ARRAY_factories, __name__)
+IJK_benchmark_factory(ArrayFactories, __name__)
 
 
 class dot_matrix():
     def time_sd(self):
-        colour.utilities.dot_matrix(IJK_SD, IJK_SD)
+        colour.utilities.dot_matrix(
+            IJK_SD[0:3, 0:3, 0:3], IJK_SD[0:3, 0:3, 0:3])
 
     def time_hd(self):
-        colour.utilities.dot_matrix(IJK_HD, IJK_HD)
+        colour.utilities.dot_matrix(
+            IJK_HD[0:3, 0:3, 0:3], IJK_HD[0:3, 0:3, 0:3])
 
     def time_uhd(self):
-        colour.utilities.dot_matrix(IJK_UHD, IJK_UHD)
+        colour.utilities.dot_matrix(
+            IJK_UHD[0:3, 0:3, 0:3], IJK_UHD[0:3, 0:3, 0:3])
 
 
 class lerp():
