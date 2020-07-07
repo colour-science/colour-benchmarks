@@ -1,5 +1,5 @@
 colour-science==0.3.14
 invoke==1.4.1
-asv==0.4.1
+asv==0.4.2
 virtualenv==20.0.13
 
