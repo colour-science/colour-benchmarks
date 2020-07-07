@@ -5,11 +5,10 @@
 """
 
 from __future__ import division, unicode_literals
-from functools import partial
+
 import colour
-import os
-from benchmarks.factories.RGB import IJK_benchmark_factory
-from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
+
+from benchmarks.factories.ijk import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -18,13 +17,13 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CIE_LAB_FACTORIES']
+__all__ = ['CieLabFactories']
 
-CIE_LAB_FACTORIES = {
+CieLabFactories = {
     'XYZ_to_Lab': colour.models.XYZ_to_Lab,
     'Lab_to_XYZ': colour.models.Lab_to_XYZ,
     'LCHab_to_Lab': colour.models.LCHab_to_Lab,
     'Lab_to_LCHab': colour.models.Lab_to_LCHab
 }
 
-IJK_benchmark_factory(CIE_LAB_FACTORIES, __name__)
+IJK_benchmark_factory(CieLabFactories, __name__)

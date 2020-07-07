@@ -5,11 +5,10 @@
 """
 
 from __future__ import division, unicode_literals
-from functools import partial
+
 import colour
-import os
-from benchmarks.factories.RGB import IJK_benchmark_factory
-from colour.utilities import (CaseInsensitiveMapping)
+
+from benchmarks.factories.ijk import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -18,9 +17,9 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CIE_CAM_FACTORIES']
+__all__ = ['Cam02UcsFactories']
 
-CIE_CAM_FACTORIES = {
+Cam02UcsFactories = {
     'JMh_CAM16_to_CAM16LCD': colour.models.JMh_CAM16_to_CAM16LCD,
     'CAM16LCD_to_JMh_CAM16': colour.models.CAM16LCD_to_JMh_CAM16,
     'JMh_CAM16_to_CAM16SCD': colour.models.JMh_CAM16_to_CAM16SCD,
@@ -29,4 +28,4 @@ CIE_CAM_FACTORIES = {
     'CAM16UCS_to_JMh_CAM16': colour.models.CAM16UCS_to_JMh_CAM16,
 }
 
-IJK_benchmark_factory(CIE_CAM_FACTORIES, __name__)
+IJK_benchmark_factory(Cam02UcsFactories, __name__)

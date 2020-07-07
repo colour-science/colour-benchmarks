@@ -5,10 +5,10 @@
 """
 
 from __future__ import division, unicode_literals
-from functools import partial
+
 import colour
-import os
-from benchmarks.factories.RGB import IJK_benchmark_factory
+
+from benchmarks.factories.ijk import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -17,9 +17,9 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['CANONLOG_FACTORIES']
+__all__ = ['CanonLogFactories']
 
-CANONLOG_FACTORIES = {
+CanonLogFactories = {
     'log_encoding_CanonLog': colour.models.log_encoding_CanonLog,
     'log_decoding_CanonLog': colour.models.log_decoding_CanonLog,
     'log_encoding_CanonLog2': colour.models.log_encoding_CanonLog2,
@@ -28,4 +28,4 @@ CANONLOG_FACTORIES = {
     'log_decoding_CanonLog3': colour.models.log_decoding_CanonLog3,
 }
 
-IJK_benchmark_factory(CANONLOG_FACTORIES, __name__)
+IJK_benchmark_factory(CanonLogFactories, __name__)

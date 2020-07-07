@@ -5,8 +5,9 @@
 .coverage
 .idea
 __pycache__
-Colour/
+colour/
 env/
 html/
 results/
 poetry.lock
+

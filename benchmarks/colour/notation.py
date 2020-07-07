@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 """
 "colour.notation" sub-package Benchmarks
-======================================
+========================================
 """
 
 from __future__ import division, unicode_literals
-from functools import partial
+
 import colour
-import os
-from benchmarks.factories.RGB import IJK_benchmark_factory
-from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
+
+from benchmarks.factories.ijk import IJK_benchmark_factory
+from benchmarks.factories.ijk import IJK_SD
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -18,12 +18,12 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['NOTATION_FACTORIES']
+__all__ = ['NotationFactories']
 
 RGB = [0.6667, 0.45, 0.8]
 HEX = colour.notation.RGB_to_HEX(RGB)
 
-NOTATION_FACTORIES = {
+NotationFactories = {
     'munsell_value_Priest1920': colour.notation.munsell_value_Priest1920,
     'munsell_value_Munsell1933': colour.notation.munsell_value_Munsell1933,
     'munsell_value_Moon1943': colour.notation.munsell_value_Moon1943,
@@ -35,7 +35,7 @@ NOTATION_FACTORIES = {
 }
 
 
-class xyY_to_munsell_colour():
+class xyY_to_munsell_Colour():
     def time_func(self):
         colour.notation.xyY_to_munsell_colour(IJK_SD[0:10, 0:10, :])
 
@@ -50,4 +50,4 @@ class HEX_to_RGB():
         colour.notation.HEX_to_RGB(HEX)
 
 
-IJK_benchmark_factory(NOTATION_FACTORIES, __name__)
+IJK_benchmark_factory(NotationFactories, __name__)

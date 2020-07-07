@@ -5,10 +5,10 @@
 """
 
 from __future__ import division, unicode_literals
-from functools import partial
+
 import colour
-import os
-from benchmarks.factories.RGB import IJK_benchmark_factory
+
+from benchmarks.factories.ijk import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['DICOMGSDF_FACTORIES']
+__all__ = ['DicomGsdfFactories']
 
-DICOMGSDF_FACTORIES = {
+DicomGsdfFactories = {
     'eotf_DICOMGSDF': colour.models.eotf_DICOMGSDF,
     'eotf_inverse_DICOMGSDF': colour.models.eotf_inverse_DICOMGSDF,
 }
 
-IJK_benchmark_factory(DICOMGSDF_FACTORIES, __name__)
+IJK_benchmark_factory(DicomGsdfFactories, __name__)

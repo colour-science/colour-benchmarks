@@ -5,10 +5,10 @@
 """
 
 from __future__ import division, unicode_literals
-from functools import partial
+
 import colour
-import os
-from benchmarks.factories.RGB import IJK_benchmark_factory
+
+from benchmarks.factories.ijk import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['ARIB_FACTORIES']
+__all__ = ['AribFactories']
 
-ARIB_FACTORIES = {
+AribFactories = {
     'oetf_ARIBSTDB67': colour.models.oetf_ARIBSTDB67,
     'oetf_inverse_ARIBSTDB67': colour.models.oetf_inverse_ARIBSTDB67,
 }
 
-IJK_benchmark_factory(ARIB_FACTORIES, __name__)
+IJK_benchmark_factory(AribFactories, __name__)

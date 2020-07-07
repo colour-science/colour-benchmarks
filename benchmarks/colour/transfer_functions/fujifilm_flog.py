@@ -5,10 +5,10 @@
 """
 
 from __future__ import division, unicode_literals
-from functools import partial
+
 import colour
-import os
-from benchmarks.factories.RGB import IJK_benchmark_factory
+
+from benchmarks.factories.ijk import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -17,11 +17,11 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['FLOG_FACTORIES']
+__all__ = ['FLogFactories']
 
-FLOG_FACTORIES = {
+FLogFactories = {
     'log_encoding_FLog': colour.models.log_encoding_FLog,
     'log_decoding_FLog': colour.models.log_decoding_FLog,
 }
 
-IJK_benchmark_factory(FLOG_FACTORIES, __name__)
+IJK_benchmark_factory(FLogFactories, __name__)

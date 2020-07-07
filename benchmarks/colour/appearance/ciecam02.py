@@ -1,15 +1,13 @@
 # -*- coding: utf-8 -*-
 """
 "colour.appearance" sub-package Benchmarks
-======================================
+==========================================
 """
 
 from __future__ import division, unicode_literals
-from functools import partial
+
 import colour
 import numpy as np
-import os
-from benchmarks.factories.RGB import IJK_SD, IJK_HD, IJK_UHD
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -20,7 +18,7 @@ __status__ = 'Production'
 
 specification = colour.appearance.CAM16_Specification(
     J=41.731207905126638, C=0.103355738709070, h=217.067959767393010)
-__all__ = ['']
+__all__ = []
 
 array = np.array([1, 2, 3])
 

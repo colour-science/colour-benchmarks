@@ -58,7 +58,7 @@ class IJKBenchmarkFactory(ABC):
 def IJK_benchmark_factory(factories, modulename=__name__, install=True):
     classes = []
     for factory, callable_ in factories.items():
-        class_ = type(factory, (IJKBenchmarkFactory,), {})
+        class_ = type(factory, (IJKBenchmarkFactory, ), {})
         if type(callable_) == list:
             class_._callable = staticmethod(callable_[0])
             class_._ijk_sd = callable_[1]

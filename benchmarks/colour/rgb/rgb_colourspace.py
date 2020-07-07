@@ -5,10 +5,11 @@
 """
 
 from __future__ import division, unicode_literals
-from functools import partial
+
 import colour
-import os
-from benchmarks.factories.RGB import IJK_benchmark_factory
+from functools import partial
+
+from benchmarks.factories.ijk import IJK_benchmark_factory
 
 __author__ = 'Colour Developers'
 __copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
@@ -17,7 +18,7 @@ __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
 __status__ = 'Production'
 
-__all__ = ['COLOURSPACE_FACTORIES']
+__all__ = ['RgbColourspaceFactories', 'RGB_to_RGB_Matrix']
 
 _illuminant_XYZ = [0.34570, 0.35850]
 _illuminant_RGB = [0.31270, 0.32900]
@@ -45,18 +46,18 @@ _RGB_luminance = partial(
     primaries=colour.models.ADOBE_RGB_1998_COLOURSPACE.primaries,
     whitepoint=colour.models.ADOBE_RGB_1998_COLOURSPACE.whitepoint)
 
-COLOURSPACE_FACTORIES = {
+RgbColourspaceFactories = {
     'RGB_to_RGB': _RGB_to_RGB,
     'RGB_luminance': _RGB_luminance,
     'RGB_to_XYZ': _RGB_to_XYZ,
     'XYZ_to_RGB': _XYZ_to_RGB
 }
 
-IJK_benchmark_factory(COLOURSPACE_FACTORIES, __name__)
+IJK_benchmark_factory(RgbColourspaceFactories, __name__)
 
 
-class RGB_to_RGB_matrix():
+class RGB_to_RGB_Matrix():
     def time_func(self):
-        colour.models.RGB_to_RGB_matrix(
+        colour.models.RGB_to_RGB_Matrix(
             input_colourspace=colour.models.sRGB_COLOURSPACE,
             output_colourspace=colour.models.PROPHOTO_RGB_COLOURSPACE)
