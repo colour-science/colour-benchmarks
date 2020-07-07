@@ -10,4 +10,4 @@ env/
 html/
 results/
 poetry.lock
-.git/
+
