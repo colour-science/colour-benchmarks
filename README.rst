@@ -15,13 +15,13 @@ Installation
 
 You'll need to have ASV installed to run these benchmarks and you'll also need ``virtualenv`` installed if you don't use conda.
 
-``$ pip install asv``
+``$ pip install --user asv``
 
 or in conda environment:
 
 ``$ conda install -c conda-forge asv``
 
-``$ pip install virtualenv`` *(optional)*
+``$ pip install --user virtualenv`` *(optional)*
 
 Running the benchmarks
 ~~~~~~~~~~~~~~~~~~~~~~
