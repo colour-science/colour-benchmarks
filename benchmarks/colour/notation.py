@@ -12,7 +12,7 @@ from benchmarks.factories.ijk import IJK_benchmark_factory
 from benchmarks.factories.ijk import IJK_SD
 
 __author__ = 'Colour Developers'
-__copyright__ = 'Copyright (C) 2019-2020 - Colour Developers'
+__copyright__ = 'Copyright (C) 2019-2021 - Colour Developers'
 __license__ = 'New BSD License - https://opensource.org/licenses/BSD-3-Clause'
 __maintainer__ = 'Colour Developers'
 __email__ = 'colour-developers@colour-science.org'
