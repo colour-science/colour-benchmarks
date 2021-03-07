@@ -42,6 +42,7 @@ def clean(ctx, bytecode=False):
     patterns = []
 
     if bytecode:
+        patterns.append('**/__pycache__')
         patterns.append('**/*.pyc')
 
     for pattern in patterns:
